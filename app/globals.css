@@ -1,26 +1,69 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-bg: #FAFAF8;
+  --color-fg: #0D0D0D;
+  --color-muted: #6B6B6B;
+  --color-border: #E8E8E4;
+  --color-accent-pink: #FF4D8D;
+  --color-accent-teal: #00C9A7;
+  --color-accent-purple: #7B5EA7;
+  --color-accent-blue: #4B8BF5;
+  --color-card-teal: #EBF9F5;
+  --color-card-pink: #FFF0F5;
+  --color-card-purple: #F0EDFF;
+  --color-card-dark: #111111;
+
+  --font-bricolage: var(--font-fjalla);
+  --font-sans: var(--font-arimo);
+  --font-mono: var(--font-arimo);
+
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-fade-up: fade-up 0.6s ease forwards;
+  --animate-float: float 6s ease-in-out infinite;
+
+  --shadow-subtle: 0 2px 16px rgba(0,0,0,0.06);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes fade-up {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-bg text-fg font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bricolage;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
+
+::selection {
+  background-color: #FF4D8D33;
+}
+
