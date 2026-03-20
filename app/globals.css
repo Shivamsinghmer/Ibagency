@@ -1,28 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #FAFAF8;
-  --color-fg: #0D0D0D;
-  --color-muted: #6B6B6B;
-  --color-border: #E8E8E4;
-  --color-accent-pink: #FF4D8D;
-  --color-accent-teal: #00C9A7;
-  --color-accent-purple: #7B5EA7;
-  --color-accent-blue: #4B8BF5;
-  --color-card-teal: #EBF9F5;
-  --color-card-pink: #FFF0F5;
-  --color-card-purple: #F0EDFF;
-  --color-card-dark: #111111;
+  /* Core luxury minimal palette */
+  --color-bg: #F8F7F4;          /* Warm off-white */
+  --color-fg: #0C0C0A;          /* Near-black with warmth */
+  --color-fg-2: #1A1A18;        /* Slightly lighter dark */
+  --color-muted: #8A8A82;       /* Warm gray for body */
+  --color-subtle: #C4C4BC;      /* Muted for dividers */
+  --color-border: #E6E5DF;      /* Warm border */
+  --color-surface: #FFFFFF;     /* Pure white card */
+  --color-surface-2: #F0EFE9;   /* Tinted surface */
 
-  --font-bricolage: var(--font-fjalla);
-  --font-sans: var(--font-arimo);
-  --font-mono: var(--font-arimo);
+  /* Intentional accents */
+  --color-pink: #F03E6E;
+  --color-teal: #00B894;
+  --color-purple: #7C6FF7;
+  --color-amber: #F59E0B;
 
+  /* Typography variables */
+  --font-bricolage: var(--font-bricolage);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  /* Animations */
   --animate-marquee: marquee 30s linear infinite;
-  --animate-fade-up: fade-up 0.6s ease forwards;
-  --animate-float: float 6s ease-in-out infinite;
-
-  --shadow-subtle: 0 2px 16px rgba(0,0,0,0.06);
+  --animate-fade-up: fade-up 0.6s ease-out forwards;
+  
+  /* Shadows */
+  --shadow-minimal: 0 1px 8px rgba(0,0,0,0.06);
 }
 
 @keyframes marquee {
@@ -31,29 +36,39 @@
 }
 
 @keyframes fade-up {
-  0% { opacity: 0; transform: translateY(30px); }
+  0% { opacity: 0; transform: translateY(20px); }
   100% { opacity: 1; transform: translateY(0); }
 }
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
 
 @layer base {
   * {
     @apply border-border;
   }
   body {
-    @apply bg-bg text-fg font-sans;
+    @apply bg-bg text-fg font-sans antialiased;
+    line-height: 1.7;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bricolage;
+    @apply font-bricolage tracking-[-0.03em];
+    line-height: 1.1;
   }
 }
 
 @layer utilities {
+  .section-label {
+    @apply font-mono text-[10px] tracking-[0.2em] uppercase text-muted;
+  }
+  
+  .h1-hero {
+    font-size: clamp(52px, 8vw, 96px);
+    @apply font-extrabold leading-[0.95];
+  }
+  
+  .h2-section {
+    font-size: clamp(36px, 5vw, 64px);
+    @apply font-bold leading-[1.05];
+  }
+
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
@@ -61,9 +76,15 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  .glass-dark {
+    background: rgba(12, 12, 10, 0.95);
+    backdrop-filter: blur(8px);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.98;
+  }
 }
 
 ::selection {
-  background-color: #FF4D8D33;
+  @apply bg-pink/20 text-fg;
 }
-

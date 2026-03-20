@@ -8,67 +8,60 @@ export default function Features() {
 
   const features = [
     {
-      title: 'World-Class Design',
-      desc: 'We craft immersive digital experiences that prioritize visual excellence and seamless user journeys.',
-      bg: 'bg-card-teal',
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent-teal">
-          <rect x="2" y="2" width="20" height="20" rx="2" ry="2" />
-          <path d="M7 2v20M17 2v20M2 12h20M2 7h20M2 17h20" />
-        </svg>
-      ),
+      id: '01',
+      title: 'Academic & Professional Background',
+      desc: 'Expertise cultivated by a highly educated and experienced team of professionals.',
     },
     {
-      title: 'Modern Engineering',
-      desc: 'Our stack is built for performance and scalability, ensuring your product stays ahead of the curve.',
-      bg: 'bg-card-dark',
-      text: 'text-white',
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-          <polyline points="16 18 22 12 16 6" />
-          <polyline points="8 6 2 12 8 18" />
-        </svg>
-      ),
+      id: '02',
+      title: 'Experimental, Proven Tech Stack',
+      desc: 'Deep knowledge in the latest frontend, backend, AI, and Web 3.0 technologies.',
     },
     {
-      title: 'Growth & Data',
-      desc: 'We use insights and analytics to guide design decisions and business growth strategies.',
-      bg: 'bg-white',
-      border: 'border border-border',
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent-purple">
-          <path d="M3 3v18h18" />
-          <path d="M18 9l-5 5-2-2-4 4" />
-        </svg>
-      ),
+      id: '03',
+      title: 'Flexible Team Integration',
+      desc: 'Seamlessly adapt into agile teams for projects ranging from early-stage startups to mature companies.',
+    },
+    {
+      id: '04',
+      title: 'Clear Communication',
+      desc: 'Ensuring detailed documentation, complete visibility, and transparent processes from day one.',
     },
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-bg px-6" ref={ref}>
-      <div className={`max-w-6xl mx-auto transition-all duration-700 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-        <div className="text-center mb-16">
-          <span className="font-mono text-xs tracking-widest text-muted uppercase">WHY CHOOSE US</span>
-          <h2 className="text-3xl md:text-5xl font-bricolage font-bold mt-4">
-            Everything you need. <span className="italic text-accent-purple">Nothing you don't.</span>
-          </h2>
-          <p className="text-muted mt-6 max-w-xl mx-auto text-lg">
-            We bridge the gap between complex technology and human-centric design, creating 
-            products that are as functional as they are beautiful.
+    <section className="py-32 bg-bg px-6 overflow-hidden scroll-mt-20" ref={ref} id="about">
+      <div className={`max-w-5xl mx-auto flex flex-col md:flex-row gap-16 transition-all duration-700 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        {/* Left Column */}
+        <div className="md:w-[40%] text-left">
+          <span className="section-label mb-4 block">What Sets Us Apart</span>
+          <h2 className="h2-section mb-6">Built different, by design.</h2>
+          <p className="text-muted text-base leading-[1.7] mb-12 max-w-sm">
+            We merge deep technical expertise with efficient team collaboration to bring your product vision to reality. No clutter, just high-intention engineering.
           </p>
+          <a href="#work" className="text-sm font-semibold hover:text-pink transition-colors group flex items-center gap-2">
+            Learn how we work <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </a>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Right Column */}
+        <div className="md:w-[60%] flex flex-col">
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className={`${feature.bg} ${feature.text || 'text-fg'} ${feature.border || ''} rounded-2xl p-10 hover:shadow-subtle hover:-translate-y-1 transition-all duration-300 group`}
+              className="py-8 border-b border-border group hover:bg-surface-2 transition-all duration-300 px-4 -mx-4 rounded-xl first:pt-0"
             >
-              <div className="mb-6 p-4 rounded-xl bg-white/10 w-fit backdrop-blur-sm">
-                {feature.icon}
+              <div className="flex gap-8 items-start">
+                <span className="font-mono text-xs text-subtle pt-1.5">{feature.id}</span>
+                <div>
+                  <h3 className="text-lg font-bricolage font-semibold mb-2 group-hover:text-fg transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-muted leading-relaxed max-w-md">
+                    {feature.desc}
+                  </p>
+                </div>
               </div>
-              <h3 className="text-2xl font-bricolage font-bold mb-4">{feature.title}</h3>
-              <p className={`text-sm opacity-80 leading-relaxed`}>{feature.desc}</p>
             </div>
           ))}
         </div>

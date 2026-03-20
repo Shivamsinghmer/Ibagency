@@ -9,6 +9,11 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@fontsource/bricolage-grotesque": "^5.2.10",
+    "@fontsource/dm-mono": "^5.2.7",
+    "@fontsource/dm-sans": "^5.2.8",
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/outfit": "^5.2.8",
     "next": "16.2.0",
     "react": "19.2.4",
     "react-dom": "19.2.4"

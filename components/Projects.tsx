@@ -8,85 +8,63 @@ export default function Projects() {
 
   const projects = [
     {
-      title: 'The Digital Landscape',
-      tag: 'Branding',
-      bg: 'bg-gradient-to-br from-card-teal to-white',
-      icon: (
-        <svg viewBox="0 0 100 100" fill="none" className="w-full h-full opacity-40">
-          <circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="2" />
-          <path d="M10 50 L90 50 M50 10 L50 90" stroke="currentColor" strokeWidth="2" strokeDasharray="4 4" />
-        </svg>
-      ),
+      id: '01',
+      title: 'AI-Powered Support Platform',
+      tags: 'SaaS · AI · Next.js',
+      bg: 'bg-fg text-white',
+      numColor: 'text-white/10',
     },
     {
-      title: 'Digital Campaign Report',
-      tag: 'Analytics',
-      bg: 'bg-card-dark',
-      text: 'text-white',
-      icon: (
-        <svg viewBox="0 0 100 100" fill="none" className="w-full h-full opacity-30 text-white">
-          <rect x="20" y="20" width="60" height="60" stroke="currentColor" strokeWidth="2" />
-          <path d="M30 40 H70 M30 50 H60 M30 60 H50" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        </svg>
-      ),
+      id: '02',
+      title: 'Task Automation App',
+      tags: 'Mobile · React Native · AI',
+      bg: 'bg-purple/15 text-fg',
+      numColor: 'text-purple/20',
     },
     {
-      title: 'SaaS User Dashboard',
-      tag: 'Product Design',
-      bg: 'bg-card-purple',
-      iconColor: 'text-accent-purple',
-      icon: (
-        <svg viewBox="0 0 100 100" fill="none" className="w-full h-full opacity-40 text-accent-purple">
-          <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="1" strokeDasharray="2 2" />
-          <path d="M20 20 L80 80 M80 20 L20 80" stroke="currentColor" strokeWidth="1" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Command UI',
-      tag: 'Web App',
-      bg: 'bg-card-pink',
-      iconColor: 'text-accent-pink',
-      icon: (
-        <svg viewBox="0 0 100 100" fill="none" className="w-full h-full opacity-40 text-accent-pink">
-          <path d="M10 20 H90 V80 H10 V20 Z M10 40 H90" stroke="currentColor" strokeWidth="2" />
-          <circle cx="20" cy="30" r="2" fill="currentColor" />
-          <circle cx="30" cy="30" r="2" fill="currentColor" />
-          <circle cx="40" cy="30" r="2" fill="currentColor" />
-        </svg>
-      ),
+      id: '03',
+      title: 'Real Estate Dashboard',
+      tags: 'Dashboard · Analytics · B2B',
+      bg: 'bg-surface border border-border text-fg',
+      numColor: 'text-subtle/10',
     },
   ];
 
   return (
-    <section id="work" className="py-20 md:py-32 bg-bg overflow-hidden px-6" ref={ref}>
-      <div className={`max-w-6xl mx-auto transition-all duration-700 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-        <div className="mb-16">
-          <span className="font-mono text-xs tracking-widest text-muted uppercase">OUR WORK</span>
-          <h2 className="text-3xl md:text-5xl font-bricolage font-bold mt-4 leading-tight">
-            Our Projects
-          </h2>
-          <p className="text-muted mt-4 max-w-lg">Selected works from the studio.</p>
+    <section id="work" className="py-32 bg-bg px-6 scroll-mt-20" ref={ref}>
+      <div className={`max-w-5xl mx-auto transition-all duration-700 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className="mb-16 text-left">
+          <span className="section-label mb-4 block">Case Studies</span>
+          <h2 className="h2-section mt-4 mb-6">Selected Works</h2>
+          <p className="text-muted text-lg max-w-sm leading-[1.7]">
+            A selection of impactful tech products we've built.
+          </p>
         </div>
 
-        <div className="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-8 -mx-6 px-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className={`${project.bg} ${project.text || 'text-fg'} min-w-[280px] sm:min-w-[340px] md:min-w-[420px] h-[480px] rounded-3xl snap-start relative flex flex-col p-10 group cursor-pointer transition-transform duration-500 hover:scale-[0.98] overflow-hidden`}
+              className={`${project.bg} rounded-2xl p-10 h-[320px] relative flex flex-col justify-between group cursor-pointer overflow-hidden transition-all duration-300 hover:translate-y-[-2px] shadow-minimal`}
             >
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 group-hover:scale-110 transition-transform duration-700 pointer-events-none">
-                {project.icon}
+              {/* Massive background number */}
+              <span className={`absolute -top-12 -right-8 text-[160px] font-bold font-bricolage select-none pointer-events-none transition-transform duration-500 group-hover:scale-110 ${project.numColor}`}>
+                {project.id}
+              </span>
+
+              <div className="relative z-10">
+                <span className="text-[11px] font-mono tracking-widest uppercase opacity-60 mb-4 block">
+                  {project.tags}
+                </span>
+                <h3 className="text-2xl font-bricolage font-bold leading-tight max-w-[200px]">
+                  {project.title}
+                </h3>
               </div>
 
-              <div className="mt-auto relative z-10 transition-all duration-300">
-                <span className="inline-block mb-3 px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm shadow-sm border border-white/10 text-xs font-mono uppercase tracking-widest font-semibold">{project.tag}</span>
-                <div className="flex items-end justify-between gap-4">
-                  <h3 className="text-3xl font-bricolage font-bold leading-tight max-w-[200px]">{project.title}</h3>
-                  <button className="whitespace-nowrap flex items-center gap-2 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    View Case Study <span className="text-lg">→</span>
-                  </button>
-                </div>
+              <div className="relative z-10 mt-auto">
+                <button className="flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all">
+                  View Case Study <span>→</span>
+                </button>
               </div>
             </div>
           ))}

@@ -1,27 +1,28 @@
 import type { Metadata } from "next";
-import { Fjalla_One, Arimo } from "next/font/google";
+import { Bricolage_Grotesque, DM_Sans, DM_Mono } from "next/font/google";
 import "./globals.css";
 
-const fjalla = Fjalla_One({
-  variable: "--font-fjalla",
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const arimo = Arimo({
-  variable: "--font-arimo",
+const dmSans = DM_Sans({
+  variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "700"],
+});
+
+const dmMono = DM_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
-  title: "Buildra — Digital Agency",
-  description: "We Build Web & Mobile Apps That Users Actually Want to Use",
-  openGraph: {
-    title: "Buildra — Digital Agency",
-    description: "Digital Studio — Est. 2020",
-    type: "website",
-  },
+  title: "Buildra — Digital Product Studio",
+  description: "Strategy, design, and engineering for ambitious startups.",
 };
 
 export default function RootLayout({
@@ -32,9 +33,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fjalla.variable} ${arimo.variable} scroll-smooth antialiased`}
+      className={`${bricolage.variable} ${dmSans.variable} ${dmMono.variable} scroll-smooth antialiased`}
     >
-      <body className="bg-bg text-fg font-sans selection:bg-accent-pink/20">
+      <body className="bg-bg text-fg font-sans">
         {children}
       </body>
     </html>
