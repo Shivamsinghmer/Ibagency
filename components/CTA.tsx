@@ -7,22 +7,26 @@ export default function CTA() {
   const [ref, isInView] = useInView({ threshold: 0.15, once: true });
 
   return (
-    <section className="py-40 bg-fg px-6 relative overflow-hidden" ref={ref}>
-      {/* Subtle depth glow */}
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-pink/10 rounded-full blur-[120px] -z-0 translate-x-1/2 -translate-y-1/2" />
-      
-      <div className={`max-w-4xl mx-auto text-center relative z-10 transition-all duration-1000 ease-out ${isInView ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'}`}>
-        <h2 className="text-5xl md:text-8xl font-bricolage font-bold mb-10 tracking-tighter text-bg">
-          Ready to <span className="italic font-medium text-pink/80">build?</span>
-        </h2>
-        <p className="text-base md:text-lg text-subtle max-w-md mx-auto mb-16 opacity-80 leading-relaxed font-dm">
-          We're currently accepting projects for Q3 2024. Let's create something people actually want to use.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          <button className="bg-bg text-fg rounded-full px-12 py-4 font-semibold hover:bg-white active:scale-95 transition-all text-sm tracking-tight shadow-xl">
-            Start a project →
-          </button>
+    <section className="py-16 md:py-24 px-4 md:px-6 bg-bg" ref={ref}>
+      <div className="max-w-6xl mx-auto bg-gradient-to-br from-[#e8f0ff] via-[#e6f8f5] to-[#f4fcff] rounded-[28px] md:rounded-[40px] relative overflow-hidden py-20 md:py-32 px-8 md:px-16 border border-border/50">
+        {/* Decorative elements removed for minimal aesthetic */}
+        <div className={`relative z-10 text-center transition-all duration-1000 ease-out ${isInView ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'}`}>
+          <h2 className="text-[clamp(36px,7vw,80px)] w-full font-bricolage font-bold mb-6 md:mb-8 tracking-[-0.04em] text-fg leading-[1.0]">
+            Ready to{' '}
+            <span className="text-chart-2 italic font-medium pr-5">build?</span>
+          </h2>
+          <p className="text-[15px] md:text-[17px] text-muted max-w-md mx-auto mb-12 leading-[1.8]">
+            Tell us about your project. We&apos;ll respond within 24 hours to schedule a deep-dive conversation.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button className="w-full sm:w-auto bg-fg text-bg rounded-full px-8 py-3.5 text-[14px] font-semibold hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10 group">
+              Start a Project <span className="inline-block group-hover:translate-x-0.5 transition-transform">→</span>
+            </button>
+            <button className="w-full sm:w-auto border border-border rounded-full px-8 py-3.5 text-[14px] font-medium text-muted hover:border-fg hover:text-fg transition-all active:scale-[0.98]">
+              See Our Work
+            </button>
+          </div>
         </div>
       </div>
     </section>

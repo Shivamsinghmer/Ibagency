@@ -1,0 +1,80 @@
+export const services = [
+  {
+    title: 'AI & Machine Learning',
+    desc: 'Custom AI solutions, ML model development, and intelligent automation systems',
+    type: 'purple',
+    tags: ['OpenAI', 'PyTorch', 'TensorFlow', 'LLMs'],
+  },
+  {
+    title: 'Full-Stack Development',
+    desc: 'End-to-end web application development with modern frameworks and best practices',
+    type: 'dark',
+    tags: ['React', 'Next.js', 'Node.js', 'PostgreSQL'],
+  },
+  {
+    title: 'Mobile App Development',
+    desc: 'Native and cross-platform mobile applications for iOS and Android',
+    type: 'surface',
+    tags: ['React Native', 'Swift', 'Kotlin', 'Flutter'],
+  },
+  {
+    title: 'Cloud Architecture',
+    desc: 'Scalable cloud infrastructure on AWS, GCP, and Azure with DevOps automation',
+    type: 'surface',
+    tags: ['AWS', 'GCP', 'Azure', 'Terraform'],
+  },
+  {
+    title: 'Enterprise Solutions',
+    desc: 'Mission-critical enterprise applications with security and compliance',
+    type: 'surface',
+    tags: ['Architecture', 'Security', 'Compliance', 'Scalability'],
+  },
+  {
+    title: 'Data Engineering',
+    desc: 'Data pipelines, warehousing, and real-time processing systems',
+    type: 'surface',
+    tags: ['Spark', 'Kafka', 'Snowflake', 'ETL'],
+  },
+  {
+    title: 'API Development',
+    desc: 'RESTful APIs, GraphQL, and microservices architecture',
+    type: 'surface',
+    tags: ['GraphQL', 'REST', 'gRPC', 'NestJS'],
+  },
+  {
+    title: 'Process Automation',
+    desc: 'Workflow automation, RPA, and business process optimization',
+    type: 'purple',
+    tags: ['n8n', 'Zapier', 'Python', 'Automation'],
+  },
+  {
+    title: 'Staff Augmentation',
+    desc: 'Skilled engineers to scale your team with technical leadership',
+    type: 'surface',
+    tags: ['Engineering', 'Leadership', 'Scaling', 'Staffing'],
+  },
+  {
+    title: 'Analytics & BI',
+    desc: 'Data analytics, business intelligence dashboards, and reporting',
+    type: 'surface',
+    tags: ['SQL', 'PowerBI', 'Tableau', 'Looker'],
+  },
+  {
+    title: 'DevOps & CI/CD',
+    desc: 'Continuous integration, deployment pipelines, and infrastructure as code',
+    type: 'purple',
+    tags: ['Github Actions', 'Docker', 'Kubernetes', 'CI/CD'],
+  },
+  {
+    title: 'MVP Development',
+    desc: 'Rapid prototype to production with agile methodologies',
+    type: 'surface',
+    tags: ['Prototypes', 'Agile', 'Lean', 'Startup'],
+  },
+  {
+    title: 'Web3 & dApp Development',
+    desc: "End-to-end decentralised application development. From smart contract design and auditing to frontend dApp interfaces, tokenomics integration, and wallet connectivity. We've worked with real Web3 clients including Hacken and Tokwealth.",
+    type: 'dark',
+    tags: ['Solidity', 'Ethers.js', 'Wagmi', 'Polygon', 'Ethereum'],
+  },
+];

@@ -5,63 +5,69 @@ import { useInView } from '@/hooks/useInView';
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-  const [ref, isInView] = useInView({ threshold: 0.15, once: true });
+  const [ref, isInView] = useInView({ threshold: 0.1, once: true });
 
   const faqs = [
     {
       q: 'How long does a typical project take?',
-      a: 'A standard website project typically takes between 4 to 8 weeks, while complex mobile applications or enterprise-level SaaS products can range from 3 to 6 months depending on requirements.',
+      a: 'Timelines depend on scope. A focused MVP typically takes 6–10 weeks. A full SaaS product or mobile app is usually 12–20 weeks. We give you a detailed estimate before we start anything.',
     },
     {
-      q: 'What makes Buildra different from other agencies?',
-      a: 'We combine high-end aesthetic design with modern engineering principles. We don’t just build products; we create strategic assets that drive growth and delight users through intentionality.',
+      q: 'What makes you different from other agencies?',
+      a: "We're engineers and designers with academic and startup backgrounds — not a body shop. We care about the quality of what we ship, not just the hours we bill. Most of our clients come back for their next project.",
     },
     {
       q: 'Do you work with early-stage startups?',
-      a: 'Absolutely. We love partnering with visionary founders. We offer specialized starter plans and strategic consulting for early-stage teams to help them build their first MVP efficiently.',
+      a: "Yes — that's a core part of what we do. We're experienced at working with founders to turn rough ideas into well-scoped, buildable products. We can also help you prioritise what to build first.",
     },
     {
       q: 'Can I upgrade or change my plan later?',
-      a: 'Of course. Our relationships are built on trust and flexibility. You can scale your engagement up or down as your needs evolve, with dedicated support at every step of the journey.',
+      a: "Absolutely. Our plans are flexible and we can adjust scope, team size, or engagement model as your needs change. Just reach out and we'll figure it out.",
     },
     {
       q: 'Do you provide post-launch support?',
-      a: 'Yes, we provide ongoing maintenance, security updates, and performance optimization for all the products we build. We’re in it for the long haul to ensure your success continues.',
+      a: 'Yes. All plans include post-launch support. We also offer ongoing retainer engagements for teams that want continuous development, maintenance, and iteration.',
     },
   ];
 
   return (
-    <section id="faq" className="py-32 bg-bg px-6 scroll-mt-20" ref={ref}>
+    <section id="faq" className="py-20 md:py-32 bg-bg px-6 scroll-mt-20" ref={ref}>
       <div className={`max-w-xl mx-auto transition-all duration-700 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         <div className="text-center mb-16">
-          <span className="section-label mb-4 block">FAQ</span>
-          <h2 className="h2-section mt-4 mb-6">Got Questions?<br />We've Got Answers</h2>
+          <span className="inline-flex items-center gap-2 mb-5">
+            <span className="w-8 h-px bg-chart-2 inline-block"></span>
+            <span className="text-[12px] md:text-[13px] font-mono tracking-[0.2em] uppercase text-muted-foreground font-bold">
+              FAQ
+            </span>
+          </span>
+          <h2 className="text-[clamp(32px,4vw,56px)] font-bricolage font-bold leading-[1.05] tracking-[-0.02em] mt-4 mb-6">
+            Got Questions? <span className="text-chart-2 italic font-medium">Answers.</span>
+          </h2>
         </div>
 
         <div className="border-t border-border">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
-              <div key={idx} className="border-b border-border transition-colors duration-300">
-                <button
+              <div key={idx} className="border-b border-border last:border-0 transition-colors duration-300">
+                <div
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full py-6 flex items-center justify-between text-left gap-4 group"
+                  className="w-full py-5 flex items-center justify-between cursor-pointer group hover:text-fg transition-colors gap-4"
                 >
-                  <span className={`text-[15px] font-semibold transition-colors duration-300 ${isOpen ? 'text-fg' : 'text-fg/70 group-hover:text-fg'}`}>
+                  <span className={`text-[15px] font-semibold transition-colors duration-300 ${isOpen ? 'text-fg' : 'text-fg/70'}`}>
                     {faq.q}
                   </span>
-                  <div className={`w-5 h-5 flex items-center justify-center text-muted transition-transform duration-300 ${isOpen ? 'rotate-45 text-fg' : ''}`}>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <line x1="12" y1="5" x2="12" y2="19" />
-                      <line x1="5" y1="12" x2="19" y2="12" />
-                    </svg>
+                  <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 ${isOpen ? 'rotate-45 bg-fg text-white' : 'rotate-0 bg-transparent border border-border text-muted'} group-hover:border-fg`}>
+                     <span className="text-[16px] leading-none font-light">+</span>
                   </div>
-                </button>
+                </div>
 
-                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[200px] pb-6 opacity-100' : 'max-h-0 opacity-0'}`}>
-                  <p className="text-[14px] leading-relaxed text-muted max-w-lg">
-                    {faq.a}
-                  </p>
+                <div className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+                  <div className="overflow-hidden">
+                    <p className="pb-5 text-[14px] text-muted leading-relaxed max-w-lg">
+                      {faq.a}
+                    </p>
+                  </div>
                 </div>
               </div>
             );

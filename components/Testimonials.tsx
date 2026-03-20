@@ -4,66 +4,77 @@ import React from 'react';
 import { useInView } from '@/hooks/useInView';
 
 export default function Testimonials() {
-  const [ref, isInView] = useInView({ threshold: 0.15, once: true });
+  const [ref, isInView] = useInView({ threshold: 0.1, once: true });
 
   const reviews = [
     {
-      name: 'Sarah Chen',
-      initials: 'SC',
-      role: 'CEO, Flux Mobile',
+      name: 'Dyma Budorin',
+      role: 'CEO, Hacken',
       stars: 5,
-      quote: 'Buildra transformed our complex product idea into a stunning, intuitive app that users actually love.',
+      quote: 'Working with the team was seamless from day one. They understood our Web3 product deeply and delivered a polished internal tool on time, with no hand-holding needed.',
+      accent: 'bg-chart-2',
     },
     {
-      name: 'Michael Ross',
-      initials: 'MR',
-      role: 'Founder, CloudScale',
+      name: 'Alex Mitrev',
+      role: 'Founder, Tokwealth',
       stars: 5,
-      quote: 'The team at Buildra is not just a service provider; they are true partners in our growth.',
+      quote: 'They turned a complex fintech concept into a clean, fast product. The design quality and frontend engineering were both genuinely impressive.',
+      accent: 'bg-chart-2',
     },
     {
-      name: 'Elena Wright',
-      initials: 'EW',
-      role: 'Growth, Nexis',
+      name: 'Lena Krotova',
+      role: 'Product Lead, Magnetiq Bank',
       stars: 5,
-      quote: 'Exceptional engineering meets world-class design. Truly a premium experience from start to finish.',
+      quote: "Our UX metrics improved significantly after the redesign. The team's attention to detail and communication throughout made the project effortless on our side.",
+      accent: 'bg-chart-2',
     },
   ];
 
   return (
-    <section id="testimonials" className="py-32 bg-bg px-6" ref={ref}>
+    <section id="testimonials" className="py-20 md:py-32 bg-bg px-6" ref={ref}>
       <div className={`max-w-5xl mx-auto transition-all duration-700 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         <div className="mb-16 text-center">
-          <span className="section-label mb-4 block">Testimonials</span>
-          <h2 className="h2-section mt-4 mb-6">Don't Take Our Word.<br />Take Theirs.</h2>
+          <span className="inline-flex items-center gap-2 mb-5">
+            <span className="w-8 h-px bg-chart-2 inline-block"></span>
+            <span className="text-[12px] md:text-[13px] font-mono tracking-[0.2em] uppercase text-muted-foreground font-bold">
+              TESTIMONIALS
+            </span>
+          </span>
+          <h2 className="text-[clamp(32px,4vw,56px)] font-bricolage font-bold leading-[1.05] tracking-[-0.03em] mt-4 mb-6">
+            Don&apos;t Take Our Word.{' '}
+            <span className="text-chart-2 italic font-medium">Take Theirs.</span>
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {reviews.map((review, idx) => (
             <div
               key={idx}
-              className="bg-surface border border-border rounded-2xl p-8 hover:translate-y-[-2px] transition-all duration-300 shadow-minimal"
+              className="bg-white border border-border rounded-2xl p-7 card-hover cursor-default flex flex-col relative overflow-hidden"
             >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-surface-2 border border-border flex items-center justify-center font-semibold text-fg text-sm">
-                  {review.initials}
+              {/* Accent bar at top */}
+              <div className={`absolute top-0 left-0 right-0 h-[3px] ${review.accent}`} />
+
+              <div className="flex items-center gap-3 mb-4">
+                <div className={`w-10 h-10 rounded-full ${review.accent} flex items-center justify-center text-white font-bricolage font-bold text-[14px] flex-shrink-0`}>
+                  {review.name.charAt(0)}
                 </div>
-                <div>
-                  <h3 className="font-bricolage font-semibold text-base leading-none">{review.name}</h3>
-                  <p className="text-[12px] text-muted mt-1">{review.role}</p>
+                <div className="flex flex-col min-w-0">
+                  <h3 className="font-bricolage font-bold text-fg text-[15px] leading-tight truncate">{review.name}</h3>
+                  <p className="text-[12px] text-muted truncate">{review.role}</p>
                 </div>
               </div>
 
-              <div className="flex gap-0.5 mb-4 text-amber">
+              <div className="flex gap-0.5 text-amber mb-3">
                 {[...Array(review.stars)].map((_, i) => (
-                  <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                  <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                   </svg>
                 ))}
               </div>
 
-              <p className="text-fg/70 text-[14px] leading-relaxed italic">
-                "{review.quote}"
+              <p className="text-[14px] text-muted leading-[1.8] flex-grow">
+                &ldquo;{review.quote}&rdquo;
               </p>
             </div>
           ))}
