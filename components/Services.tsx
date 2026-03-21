@@ -45,7 +45,7 @@ export default function Services() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center gap-6 animate-fade-up [animation-delay:300ms]">
-           <button className="bg-fg text-bg rounded-full px-8 py-3.5 text-[14px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10">
+           <button className="bg-fg text-white rounded-full px-8 py-3.5 text-[14px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10">
             Start a Project
           </button>
           <Link 

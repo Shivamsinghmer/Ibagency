@@ -52,7 +52,7 @@ export default function Navbar() {
 
         {/* Action Button & Mobile Toggle */}
         <div className="flex items-center gap-3 md:gap-4">
-          <button className="hidden sm:block bg-fg text-bg rounded-full px-6 py-2.5 text-[13px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all">
+          <button className="hidden sm:block bg-fg text-white rounded-full px-6 py-2.5 text-[13px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all">
             Start a Project
           </button>
           
@@ -82,7 +82,7 @@ export default function Navbar() {
             </Link>
           ))}
           <button 
-            className="w-full sm:hidden bg-fg text-bg rounded-full px-6 py-3 text-[14px] font-medium active:scale-[0.98] transition-all"
+            className="w-full sm:hidden bg-fg text-white rounded-full px-6 py-3 text-[14px] font-medium active:scale-[0.98] transition-all"
             onClick={() => setIsOpen(false)}
           >
             Start a Project

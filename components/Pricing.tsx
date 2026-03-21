@@ -77,13 +77,13 @@ export default function Pricing() {
           <div className="inline-flex bg-white border border-border rounded-full p-1 gap-1">
             <button
               onClick={() => setBilling('monthly')}
-              className={`px-5 py-2 rounded-full text-[13px] font-medium cursor-pointer transition-all duration-200 ${billing === 'monthly' ? 'bg-fg text-bg shadow-sm' : 'text-muted hover:text-fg'}`}
+              className={`px-5 py-2 rounded-full text-[13px] font-medium cursor-pointer transition-all duration-200 ${billing === 'monthly' ? 'bg-fg text-white shadow-sm' : 'text-muted hover:text-fg'}`}
             >
               Monthly
             </button>
             <button
               onClick={() => setBilling('one-time')}
-              className={`px-5 py-2 rounded-full text-[13px] font-medium cursor-pointer transition-all duration-200 ${billing === 'one-time' ? 'bg-fg text-bg shadow-sm' : 'text-muted hover:text-fg'}`}
+              className={`px-5 py-2 rounded-full text-[13px] font-medium cursor-pointer transition-all duration-200 ${billing === 'one-time' ? 'bg-fg text-white shadow-sm' : 'text-muted hover:text-fg'}`}
             >
               One-time
             </button>

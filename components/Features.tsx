@@ -60,7 +60,7 @@ export default function Features() {
           </p>
           <a 
             href="#work" 
-            className="group inline-flex items-center gap-2 bg-fg text-bg rounded-full px-6 py-2.5 text-[13px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all"
+            className="group inline-flex items-center gap-2 bg-fg text-white rounded-full px-6 py-2.5 text-[13px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all"
           >
             See our work <span className="group-hover:translate-x-0.5 transition-transform">→</span>
           </a>

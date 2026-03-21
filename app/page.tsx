@@ -9,15 +9,21 @@ import Pricing from '@/components/Pricing';
 import FAQ from '@/components/FAQ';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
+import ProjectMarquee from '@/components/ProjectMarquee';
+
 
 export default function Home() {
   return (
     <main className="min-h-screen relative overflow-x-hidden">
       <Navbar />
+
+
       <Hero />
+      <LogoMarquee />
       <Features />
       <Services />
-      <LogoMarquee />
+      <ProjectMarquee />
+      
       <Projects />
       <Testimonials />
       <Pricing />
