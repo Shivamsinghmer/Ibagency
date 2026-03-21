@@ -30,11 +30,14 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-5xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-4 md:px-6 h-18 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group" onClick={() => setIsOpen(false)}>
-          <div className="w-1.5 h-1.5 rounded-full bg-chart-2 animate-pulse" />
-          <span className="font-bricolage text-lg font-semibold tracking-tight text-fg">Buildra</span>
+        <Link href="/" className="flex items-center group" onClick={() => setIsOpen(false)}>
+          <img 
+            src="/agencyLogo.png" 
+            alt="CodeMonks Logo" 
+            className="h-23 w-auto object-contain transition-transform duration-300 group-hover:scale-110" 
+          />
         </Link>
 
         {/* Desktop Links */}

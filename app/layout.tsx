@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, DM_Sans, DM_Mono, Inter } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
+import { cn } from "../lib/utils";
 
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
@@ -18,7 +18,7 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Buildra — Digital Product Studio",
+  title: "CodeMonks — Digital Product Studio",
   description: "Strategy, design, and engineering for ambitious startups.",
 };
 
