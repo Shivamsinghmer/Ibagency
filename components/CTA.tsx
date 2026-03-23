@@ -18,12 +18,12 @@ export default function CTA() {
           <p className="text-[15px] md:text-[17px] text-muted max-w-md mx-auto mb-12 leading-[1.8]">
             Tell us about your project. We&apos;ll respond within 24 hours to schedule a deep-dive conversation.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button className="w-full sm:w-auto bg-fg text-white rounded-full px-8 py-3.5 text-[14px] font-semibold hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10 group">
               Start a Project <span className="inline-block group-hover:translate-x-0.5 transition-transform">→</span>
             </button>
-            <button className="w-full sm:w-auto border border-border rounded-full px-8 py-3.5 text-[14px] font-medium text-muted hover:border-fg hover:text-fg transition-all active:scale-[0.98]">
+            <button className="w-full sm:w-auto bg-fg text-white rounded-full px-8 py-3.5 text-[14px] font-medium hover:bg-fg/90 transition-all active:scale-[0.98]">
               See Our Work
             </button>
           </div>

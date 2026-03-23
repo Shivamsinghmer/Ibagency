@@ -15,7 +15,7 @@ export default function Hero() {
         <div className="animate-fade-up">
           <span className="inline-flex items-center gap-2 border border-border bg-white/60 backdrop-blur rounded-full px-5 py-2 text-[11px] font-mono text-muted-foreground tracking-[0.15em] uppercase mb-8 shadow-minimal">
             <span className="w-1.5 h-1.5 rounded-full bg-chart-2 animate-pulse"></span>
-            Digital Design & Development Agency
+            Digital Product Design & Development Agency
           </span>
         </div>
 
@@ -24,18 +24,18 @@ export default function Hero() {
           <span className="md:whitespace-nowrap">
             <span className="text-chart-2 italic">Digital Products,</span>
           </span>
-          <span className="md:whitespace-nowrap">People Actually Use.</span>
+          <span className="md:whitespace-nowrap">People Love To Use.</span>
         </h1>
 
         <p className="text-[15px] md:text-[17px] text-muted max-w-xl mx-auto mb-10 animate-fade-up [animation-delay:200ms] leading-[1.8]">
-          From ambitious startups building their first MVP to established companies scaling their product — we bring strategy, design, and engineering together.
+          From ambitious startups building their first MVP to established companies scaling their product with flexible and talented outsourced teams <br /> We bring strategy, design, and engineering together.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-5 animate-fade-up [animation-delay:300ms]">
           <button className="bg-fg text-white rounded-full px-8 py-3.5 text-[14px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10 group">
             Start a Project <span className="inline-block transition-transform group-hover:translate-x-0.5">→</span>
           </button>
-          <button className="border border-border bg-white/60 backdrop-blur rounded-full px-8 py-3.5 text-[14px] font-medium text-muted hover:border-fg hover:text-fg active:scale-[0.98] transition-all">
+          <button className="bg-fg text-white rounded-full px-8 py-3.5 text-[14px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10">
             View Our Work
           </button>
         </div>

@@ -24,19 +24,18 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || isOpen
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isOpen
           ? 'bg-bg/90 backdrop-blur-md border-b border-border'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <div className="max-w-5xl mx-auto px-4 md:px-6 h-18 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center group" onClick={() => setIsOpen(false)}>
-          <img 
-            src="/agencyLogo.png" 
-            alt="CodeMonks Logo" 
-            className="h-23 w-auto object-contain transition-transform duration-300 group-hover:scale-110" 
+          <img
+            src="/agencyLogo.png"
+            alt="CodeMonks Logo"
+            className="h-23 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
           />
         </Link>
 
@@ -58,9 +57,9 @@ export default function Navbar() {
           <button className="hidden sm:block bg-fg text-white rounded-full px-6 py-2.5 text-[13px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all">
             Start a Project
           </button>
-          
-          <button 
-            className="md:hidden p-2 text-fg focus:outline-none" 
+
+          <button
+            className="md:hidden p-2 text-fg focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -84,7 +83,7 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <button 
+          <button
             className="w-full sm:hidden bg-fg text-white rounded-full px-6 py-3 text-[14px] font-medium active:scale-[0.98] transition-all"
             onClick={() => setIsOpen(false)}
           >

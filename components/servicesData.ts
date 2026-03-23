@@ -18,6 +18,12 @@ export const services = [
     tags: ['React Native', 'Swift', 'Kotlin', 'Flutter'],
   },
   {
+    title: 'AI Agents & Automation',
+    desc: 'Workflow automation, RPA, and business process optimization',
+    type: 'purple',
+    tags: ['n8n', 'Zapier', 'Python', 'Automation'],
+  },
+  {
     title: 'Cloud Architecture',
     desc: 'Scalable cloud infrastructure on AWS, GCP, and Azure with DevOps automation',
     type: 'surface',
@@ -41,12 +47,7 @@ export const services = [
     type: 'surface',
     tags: ['GraphQL', 'REST', 'gRPC', 'NestJS'],
   },
-  {
-    title: 'Process Automation',
-    desc: 'Workflow automation, RPA, and business process optimization',
-    type: 'purple',
-    tags: ['n8n', 'Zapier', 'Python', 'Automation'],
-  },
+
   {
     title: 'Staff Augmentation',
     desc: 'Skilled engineers to scale your team with technical leadership',

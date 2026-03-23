@@ -9,7 +9,7 @@ const bricolage = Bricolage_Grotesque({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 const dmMono = DM_Mono({
   variable: "--font-mono",
@@ -33,11 +33,11 @@ export default function RootLayout({
       className={cn("scroll-smooth", "antialiased", bricolage.variable, dmMono.variable, "font-sans", inter.variable)}
     >
       <body className="bg-bg/85 text-fg font-sans relative">
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="fixed inset-0 -z-10 h-full w-full object-cover"
         >
           <source src="/hero.mp4" type="video/mp4" />

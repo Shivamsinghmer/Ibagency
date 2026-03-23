@@ -42,7 +42,7 @@ export default function Features() {
   return (
     <section className="py-20 md:py-32 bg-bg px-6 overflow-hidden scroll-mt-20" ref={ref} id="about">
       <div className={`max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_3fr] items-start gap-16 transition-all duration-700 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-        
+
         {/* Left Column - Sticky */}
         <div className="md:sticky md:top-32">
           <span className="inline-flex items-center gap-2 mb-5">
@@ -58,8 +58,8 @@ export default function Features() {
           <p className="text-muted text-[15px] leading-[1.8] mb-10 max-w-sm">
             We don't just write code — we bring academic rigour, real-world experience, and genuine care to every product we help build.
           </p>
-          <a 
-            href="#work" 
+          <a
+            href="#work"
             className="group inline-flex items-center gap-2 bg-fg text-white rounded-full px-6 py-2.5 text-[13px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all"
           >
             See our work <span className="group-hover:translate-x-0.5 transition-transform">→</span>

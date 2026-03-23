@@ -11,11 +11,11 @@ export default function Services() {
 
   const landingServices = [
     { ...services.find(s => s.title.includes('Full-Stack')), bg: 'bg-[#f4fcff] border border-border text-fg', featured: true },
-    { ...services.find(s => s.title.includes('AI')), bg: 'bg-[#e8f0ff] border border-border/50 text-fg' },
-    { ...services.find(s => s.title.includes('Enterprise')), bg: 'bg-white border border-border text-fg' },
+    { ...services.find(s => s.title === 'AI Agents & Automation'), bg: 'bg-[#e8f0ff] border border-border/50 text-fg' },
+    { ...services.find(s => s.title.includes('AI & Machine Learning')), bg: 'bg-[#fff4fc] border border-border/50 text-fg' },
     { ...services.find(s => s.title === 'Mobile App Development'), bg: 'bg-[#f4fcff] border border-border text-fg' },
     { ...services.find(s => s.title.includes('Cloud')), bg: 'bg-[#e6f8f5] border border-border/50 text-fg' },
-    { ...services.find(s => s.title.includes('Data')), bg: 'bg-white border border-border text-fg' },
+    { ...services.find(s => s.title.includes('Data Engineering')), bg: 'bg-white border border-border text-fg' },
     { ...services.find(s => s.title.includes('Web3')), bg: 'bg-[#f4fcff] border border-border text-fg', full: true },
   ].filter(s => s.title);
 
@@ -45,11 +45,11 @@ export default function Services() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center gap-6 animate-fade-up [animation-delay:300ms]">
-           <button className="bg-fg text-white rounded-full px-8 py-3.5 text-[14px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10">
+          <button className="bg-fg text-white rounded-full px-8 py-3.5 text-[14px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10">
             Start a Project
           </button>
-          <Link 
-            href="/services" 
+          <Link
+            href="/services"
             className="text-muted hover:text-fg text-[14px] transition-colors group flex items-center gap-1"
           >
             See All Services <span className="group-hover:translate-x-1 transition-transform inline-block ml-1">→</span>

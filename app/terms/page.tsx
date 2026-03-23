@@ -9,7 +9,7 @@ export default function TermsPage() {
           ← Back to home
         </Link>
         <h1 className="text-4xl md:text-5xl font-bricolage font-bold tracking-tight mb-8">Terms of Service</h1>
-        
+
         <div className="space-y-8 text-[15px] leading-relaxed text-muted-foreground font-sans">
           <section>
             <h2 className="text-xl font-bold text-fg mb-4">1. Acceptance of Terms</h2>

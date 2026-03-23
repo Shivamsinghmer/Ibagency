@@ -58,7 +58,7 @@ export default function FAQ() {
                     {faq.q}
                   </span>
                   <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 ${isOpen ? 'rotate-45 bg-fg text-white' : 'rotate-0 bg-transparent border border-border text-muted'} group-hover:border-fg`}>
-                     <span className="text-[16px] leading-none font-light">+</span>
+                    <span className="text-[16px] leading-none font-light">+</span>
                   </div>
                 </div>
 
