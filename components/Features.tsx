@@ -10,13 +10,13 @@ export default function Features() {
     {
       id: '01',
       title: 'Academic & Professional Background',
-      desc: 'Our team holds advanced degrees and has shipped products across fintech, Web3, SaaS, and mobility.',
+      desc: 'Our team holds advance degrees from top institutions and has shipped products across fintech, Web3, SaaS, and mobility.',
       accent: 'bg-chart-2',
     },
     {
       id: '02',
       title: 'Experience Across Tech Stacks',
-      desc: "From React and Node.js to Solidity and LangChain — we've worked across the full spectrum of modern tech.",
+      desc: "From React and Node.js to Python, Solidity and LangChain; and from app development to SAAS platforms, Analytics tools and Web3 dApps — we've worked across the full spectrum of modern tech.",
       accent: 'bg-chart-2',
     },
     {

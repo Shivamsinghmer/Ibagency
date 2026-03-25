@@ -21,7 +21,7 @@ export default function CTA() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button className="w-full sm:w-auto bg-fg text-white rounded-full px-8 py-3.5 text-[14px] font-semibold hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10 group">
-              Start a Project <span className="inline-block group-hover:translate-x-0.5 transition-transform">→</span>
+              Start a Project 
             </button>
             <button className="w-full sm:w-auto bg-fg text-white rounded-full px-8 py-3.5 text-[14px] font-medium hover:bg-fg/90 transition-all active:scale-[0.98]">
               See Our Work
