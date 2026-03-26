@@ -16,7 +16,7 @@ export default function Services() {
     { ...services.find(s => s.title === 'AI & Machine Learning'), icon: BrainCircuit, bg: 'bg-[#fff4fc] border border-border/50 text-fg' },
     { ...services.find(s => s.title === 'Mobile App Development'), icon: Smartphone, bg: 'bg-[#f4fcff] border border-border text-fg' },
     { ...services.find(s => s.title === 'Cloud Architecture'), icon: Cloud, bg: 'bg-[#e6f8f5] border border-border/50 text-fg' },
-    { ...services.find(s => s.title === 'Web3 & dApp Development'), icon: Cpu, bg: 'bg-fg text-white', featured: true },
+    { ...services.find(s => s.title === 'Web3 & dApp Development'), icon: Cpu, bg: 'bg-[#f4fcff] border border-border text-fg', featured: true },
     { ...services.find(s => s.title === 'Enterprise Solutions'), icon: Lock, bg: 'bg-white border border-border text-fg' },
     { ...services.find(s => s.title === 'Data Engineering'), icon: Database, bg: 'bg-[#f4fcff] border border-border text-fg' },
     { ...services.find(s => s.title === 'API Development'), icon: Code2, bg: 'bg-[#e8f0ff] border border-border/50 text-fg' },

@@ -57,7 +57,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
         <h3 className={`font-bricolage font-semibold text-[16px] md:text-[18px] mb-2 tracking-tight ${isDark ? 'text-white' : 'text-fg'}`}>
           {service.title}
         </h3>
-        <p className={`text-[12px] md:text-[13px] leading-snug line-clamp-2 ${isDark ? 'text-white/50 group-hover:text-white/70 transition-colors' : 'text-muted'}`}>
+        <p className={`text-[12px] md:text-[13px] leading-snug ${isDark ? 'text-white/50 group-hover:text-white/70 transition-colors' : 'text-muted'}`}>
           {service.desc}
         </p>
       </div>
