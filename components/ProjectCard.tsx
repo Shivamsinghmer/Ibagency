@@ -58,7 +58,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           ))}
         </div>
         <span className={`text-[12px] font-medium flex items-center gap-1 group-hover:gap-2 transition-all ${isDark ? 'text-white' : 'text-fg'}`}>
-          View Case Study <span className="transition-transform group-hover:translate-x-1">→</span>
+          View Case Study
         </span>
       </div>
     </Link>

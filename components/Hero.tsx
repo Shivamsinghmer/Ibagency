@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative bg-bg scroll-mt-20 overflow-hidden pt-25 md:pt-30 pb-20 md:pb-25">
+    <section id="home" className="relative bg-bg scroll-mt-20 overflow-hidden pt-20 md:pt-30 pb-12 md:pb-25">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -13,8 +13,8 @@ export default function Hero() {
         className="flex-grow flex flex-col items-center justify-center max-w-5xl mx-auto px-6 text-center relative z-20"
       >
         <div className="animate-fade-up">
-          <span className="inline-flex items-center gap-2 border border-border bg-white/60 backdrop-blur rounded-full px-5 py-2 text-[11px] font-mono text-muted-foreground tracking-[0.15em] uppercase mb-8 shadow-minimal">
-            <span className="w-1.5 h-1.5 rounded-full bg-chart-2 animate-pulse"></span>
+          <span className="inline-flex items-center gap-3 border border-border bg-white/60 backdrop-blur rounded-full px-5 py-2 text-[10px] md:text-[11px] font-mono text-muted-foreground tracking-[0.1em] md:tracking-[0.15em] uppercase mb-8 shadow-minimal whitespace-nowrap overflow-hidden text-ellipsis">
+            <span className="w-5 h-px bg-chart-2 shrink-0"></span>
             Digital Product Design & Development Agency
           </span>
         </div>
@@ -33,27 +33,29 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-5 animate-fade-up [animation-delay:300ms]">
           <button className="bg-fg text-white rounded-full px-8 py-3.5 text-[14px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10 group">
-            Start a Project <span className="inline-block transition-transform group-hover:translate-x-0.5">→</span>
+            Start a Project
           </button>
-          <button className="bg-fg text-white rounded-full px-8 py-3.5 text-[14px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10">
+          <button className="bg-white/80 backdrop-blur border border-border text-fg rounded-full px-8 py-3.5 text-[14px] font-medium hover:bg-white active:scale-[0.98] transition-all shadow-sm">
             View Our Work
           </button>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center pb-5 gap-x-6 gap-y-2 text-[13px] text-muted animate-fade-up [animation-delay:400ms] font-medium">
-          <div className="flex items-center gap-1.5">
+        <div className="flex flex-wrap items-center justify-center pb-5 gap-x-6 md:gap-x-8 gap-y-3 text-[13px] text-muted animate-fade-up [animation-delay:400ms] font-medium">
+          <div className="flex items-center gap-2">
+            <span className='text-fg font-semibold'>🚀</span>
             <span className="text-fg font-semibold">20+</span>
             <span>Projects Shipped</span>
           </div>
           <span className="text-border text-lg leading-none select-none hidden sm:block">·</span>
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-2">
+            <span className='text-fg font-semibold'>⭐</span>
             <span className="text-fg font-semibold">5★</span>
             <span>Client Rating</span>
           </div>
           <span className="text-border text-lg leading-none select-none hidden sm:block">·</span>
-          <div className="flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-chart-2" />
-            <span>Since 2020</span>
+          <div className="flex items-center gap-2">
+            <span className='text-fg font-semibold'>📅</span>
+            <span>Since <span className="text-fg font-semibold">2020</span></span>
           </div>
         </div>
       </motion.div>

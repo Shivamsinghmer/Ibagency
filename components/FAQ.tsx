@@ -31,9 +31,9 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="py-20 md:py-32 bg-bg px-6 scroll-mt-20" ref={ref}>
+    <section id="faq" className="py-12 md:py-32 bg-bg px-6 scroll-mt-20" ref={ref}>
       <div className={`max-w-xl mx-auto transition-all duration-700 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <span className="inline-flex items-center gap-2 mb-5">
             <span className="w-8 h-px bg-chart-2 inline-block"></span>
             <span className="text-[12px] md:text-[13px] font-mono tracking-[0.2em] uppercase text-muted-foreground font-bold">
@@ -41,7 +41,7 @@ export default function FAQ() {
             </span>
           </span>
           <h2 className="text-[32px] md:text-[clamp(32px,4vw,56px)] font-bricolage font-bold leading-[1.05] tracking-[-0.02em] mt-4 mb-6">
-            Got Questions? <span className="text-secondary-foreground italic font-medium">Answers.</span>
+            Got Questions? <span className="text-chart-2 italic font-medium">Answers.</span>
           </h2>
         </div>
 
