@@ -29,13 +29,13 @@ export default function Navbar() {
           : 'bg-transparent'
         }`}
     >
-      <div className="max-w-5xl mx-auto px-4 md:px-6 h-18 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-4 md:px-6 h-16 md:h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center group" onClick={() => setIsOpen(false)}>
           <img
             src="/agencyLogo.png"
             alt="CodeMonks Logo"
-            className="h-23 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+            className="h-20 md:h-25 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
           />
         </Link>
 
@@ -59,13 +59,24 @@ export default function Navbar() {
           </button>
 
           <button
-            className="md:hidden p-2 text-fg focus:outline-none"
+            className="md:hidden relative z-50 p-2 -mr-2 text-fg focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
-            <div className={`w-5 h-0.5 bg-current transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-1.5' : 'mb-1'}`} />
-            <div className={`w-5 h-0.5 bg-current transition-all duration-300 ${isOpen ? 'opacity-0' : 'mb-1'}`} />
-            <div className={`w-5 h-0.5 bg-current transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
+            <div className="w-6 h-5 flex flex-col justify-between relative">
+              <span
+                className={`w-full h-0.5 bg-current transition-all duration-300 ease-in-out ${isOpen ? 'rotate-45 translate-y-[9px]' : ''
+                  }`}
+              />
+              <span
+                className={`w-full h-0.5 bg-current transition-all duration-300 ease-in-out ${isOpen ? 'opacity-0' : ''
+                  }`}
+              />
+              <span
+                className={`w-full h-0.5 bg-current transition-all duration-300 ease-in-out ${isOpen ? '-rotate-45 -translate-y-[9px]' : ''
+                  }`}
+              />
+            </div>
           </button>
         </div>
       </div>

@@ -18,7 +18,7 @@ export default function Projects() {
               OUR WORK
             </span>
           </span>
-          <h2 className="text-[clamp(32px,4vw,56px)] font-bricolage font-bold leading-[1.05] tracking-[-0.03em] mt-4 mb-6">
+          <h2 className="text-[32px] md:text-[clamp(32px,4vw,56px)] font-bricolage font-bold leading-[1.05] tracking-[-0.03em] mt-4 mb-6">
             Case{' '}
             <span className="text-chart-2 italic font-medium">Studies</span>
           </h2>

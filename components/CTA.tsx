@@ -8,12 +8,12 @@ export default function CTA() {
 
   return (
     <section className="py-16 md:py-24 px-4 md:px-6 bg-bg" ref={ref}>
-      <div className="max-w-6xl mx-auto bg-gradient-to-br from-[#e8f0ff] via-[#e6f8f5] to-[#f4fcff] rounded-[28px] md:rounded-[40px] relative overflow-hidden py-20 md:py-32 px-8 md:px-16 border border-border/50">
+      <div className="max-w-6xl mx-auto bg-gradient-to-br from-[#e8f0ff] via-[#e6f8f5] to-[#f4fcff] rounded-[28px] md:rounded-[40px] relative overflow-hidden py-16 md:py-32 px-6 md:px-16 border border-border/50">
         {/* Decorative elements removed for minimal aesthetic */}
         <div className={`relative z-10 text-center transition-all duration-1000 ease-out ${isInView ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'}`}>
-          <h2 className="text-[clamp(36px,7vw,80px)] w-full font-bricolage font-bold mb-6 md:mb-8 tracking-[-0.04em] text-fg leading-[1.0]">
+          <h2 className="text-[36px] md:text-[clamp(36px,7vw,80px)] w-full font-bricolage font-bold mb-6 md:mb-8 tracking-[-0.04em] text-fg leading-[1.0]">
             Ready to{' '}
-            <span className="text-chart-2 italic font-medium pr-5">build?</span>
+            <span className="text-chart-2 italic font-medium pr-2 md:pr-5">build?</span>
           </h2>
           <p className="text-[15px] md:text-[17px] text-muted max-w-md mx-auto mb-12 leading-[1.8]">
             Tell us about your project. We&apos;ll respond within 24 hours to schedule a deep-dive conversation.

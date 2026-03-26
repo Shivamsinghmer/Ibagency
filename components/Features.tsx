@@ -41,21 +41,21 @@ export default function Features() {
 
   return (
     <section className="py-20 md:py-32 bg-bg px-6 overflow-hidden scroll-mt-20" ref={ref} id="about">
-      <div className={`max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_3fr] items-start gap-16 transition-all duration-700 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+      <div className={`max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_3fr] items-start gap-12 md:gap-16 transition-all duration-700 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
 
         {/* Left Column - Sticky */}
-        <div className="md:sticky md:top-32">
-          <span className="inline-flex items-center gap-2 mb-5">
+        <div className="md:sticky md:top-32 mb-4 md:mb-0">
+          <span className="inline-flex items-center gap-2 mb-4 md:mb-5">
             <span className="w-8 h-px bg-chart-2 inline-block"></span>
             <span className="text-[12px] md:text-[13px] font-mono tracking-[0.2em] uppercase text-muted-foreground font-bold">
               OUR ADVANTAGE
             </span>
           </span>
-          <h2 className="text-[clamp(32px,4vw,56px)] font-bricolage font-bold leading-[1.05] tracking-[-0.03em] mb-6">
+          <h2 className="text-[32px] md:text-[clamp(32px,4vw,56px)] font-bricolage font-bold leading-[1.05] tracking-[-0.03em] mb-4 md:mb-6">
             Why choose{' '}
             <span className="text-chart-2 italic font-medium">us?</span>
           </h2>
-          <p className="text-muted text-[15px] leading-[1.8] mb-10 max-w-sm">
+          <p className="text-muted text-[15px] leading-[1.8] mb-8 md:mb-10 max-w-sm">
             We don't just write code — we bring academic rigour, real-world experience, and genuine care to every product we help build.
           </p>
           <a
@@ -71,7 +71,7 @@ export default function Features() {
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="group py-6 border-b border-border last:border-0 grid grid-cols-[32px_1fr] gap-4 items-start hover:bg-white/50 -mx-4 px-4 rounded-xl transition-colors"
+              className="group py-5 md:py-6 border-b border-border last:border-0 grid grid-cols-[32px_1fr] gap-4 items-start hover:bg-white/50 -mx-2 md:-mx-4 px-2 md:px-4 rounded-xl transition-colors"
             >
               <div className="flex flex-col items-center gap-2 pt-1">
                 <div className={`w-2 h-2 rounded-full ${feature.accent}`} />

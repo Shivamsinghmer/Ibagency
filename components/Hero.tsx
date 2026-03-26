@@ -19,12 +19,12 @@ export default function Hero() {
           </span>
         </div>
 
-        <h1 className="flex flex-col items-center text-[42px] leading-[1.0] md:text-[clamp(56px,8vw,100px)] md:leading-[0.92] font-bricolage font-extrabold mb-8 animate-fade-up [animation-delay:100ms] text-fg tracking-[-0.04em]">
+        <h1 className="flex flex-col items-center text-[38px] leading-[1.0] md:text-[clamp(56px,8vw,100px)] md:leading-[0.92] font-bricolage font-extrabold mb-8 animate-fade-up [animation-delay:100ms] text-fg tracking-[-0.04em]">
           <span className="md:whitespace-nowrap">We Build</span>
           <span className="md:whitespace-nowrap">
-            <span className="text-chart-2 italic">Digital Products,</span>
+            <span className="text-chart-2 italic">Digital Products</span>
           </span>
-          <span className="md:whitespace-nowrap">People Love To Use.</span>
+          <span className="md:whitespace-nowrap">People Love To Use</span>
         </h1>
 
         <p className="text-[15px] md:text-[17px] text-muted max-w-xl mx-auto mb-10 animate-fade-up [animation-delay:200ms] leading-[1.8]">

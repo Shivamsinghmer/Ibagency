@@ -25,22 +25,22 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
     <Link 
       href={`/work/${project.slug}`}
       className={`
-        relative overflow-hidden rounded-2xl p-8 flex flex-col justify-between min-h-[280px] transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] group cursor-pointer
+        relative overflow-hidden rounded-2xl p-6 md:p-8 flex flex-col justify-between min-h-[260px] md:min-h-[280px] transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] group cursor-pointer
         ${project.bg}
       `}
       style={{ '--delay': `${index * 50}ms` } as any}
     >
       {/* Background Watermark */}
-      <span className={`absolute bottom-6 right-6 text-[80px] font-bricolage font-extrabold pointer-events-none select-none z-0 leading-none ${watermarkColor}`}>
+      <span className={`absolute bottom-4 right-4 md:bottom-6 md:right-6 text-[60px] md:text-[80px] font-bricolage font-extrabold pointer-events-none select-none z-0 leading-none ${watermarkColor}`}>
         {project.id}
       </span>
 
       <div className="relative z-10">
-        <div className="flex flex-col gap-2 mb-4">
-          <span className={`inline-block w-fit text-[11px] font-mono tracking-wider uppercase px-2.5 py-1 rounded-full ${isDark ? 'bg-white/10 text-white/70' : 'bg-fg/5 text-muted'}`}>
+        <div className="flex flex-col gap-1.5 md:gap-2 mb-4">
+          <span className={`inline-block w-fit text-[10px] md:text-[11px] font-mono tracking-wider uppercase px-2.5 py-1 rounded-full ${isDark ? 'bg-white/10 text-white/70' : 'bg-fg/5 text-muted'}`}>
             {project.category.split(' · ')[0]}
           </span>
-          <h3 className={`text-[20px] font-bricolage font-bold leading-tight ${isDark ? 'text-white' : 'text-fg'}`}>
+          <h3 className={`text-[19px] md:text-[20px] font-bricolage font-bold leading-tight ${isDark ? 'text-white' : 'text-fg'}`}>
             {project.title}
           </h3>
         </div>

@@ -40,8 +40,8 @@ export default function FAQ() {
               FAQ
             </span>
           </span>
-          <h2 className="text-[clamp(32px,4vw,56px)] font-bricolage font-bold leading-[1.05] tracking-[-0.02em] mt-4 mb-6">
-            Got Questions? <span className="text-chart-2 italic font-medium">Answers.</span>
+          <h2 className="text-[32px] md:text-[clamp(32px,4vw,56px)] font-bricolage font-bold leading-[1.05] tracking-[-0.02em] mt-4 mb-6">
+            Got Questions? <span className="text-secondary-foreground italic font-medium">Answers.</span>
           </h2>
         </div>
 

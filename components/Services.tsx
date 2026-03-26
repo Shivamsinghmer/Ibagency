@@ -30,16 +30,16 @@ export default function Services() {
               OUR SERVICES
             </span>
           </span>
-          <h2 className="text-[clamp(32px,4vw,56px)] font-bricolage font-bold leading-[1.05] tracking-[-0.03em] mt-4 mb-6 animate-fade-up [animation-delay:75ms]">
+          <h2 className="text-[32px] md:text-[clamp(32px,4vw,56px)] font-bricolage font-bold leading-[1.05] tracking-[-0.03em] mt-4 mb-6 animate-fade-up [animation-delay:75ms]">
             End-to-End{' '}
             <span className="text-chart-2 italic font-medium">Solutions</span>
           </h2>
-          <p className="text-muted text-[15px] max-w-md leading-[1.8] animate-fade-up [animation-delay:150ms]">
+          <p className="text-muted text-[15px] max-w-sm leading-[1.8] animate-fade-up [animation-delay:150ms]">
             A complete suite of digital services — from idea to launch and beyond.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16 animate-fade-up [animation-delay:200ms]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mb-16 animate-fade-up [animation-delay:200ms]">
           {landingServices.map((service, idx) => (
             <ServiceCard key={idx} service={service as any} index={idx} />
           ))}

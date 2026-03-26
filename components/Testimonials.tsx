@@ -79,9 +79,9 @@ export default function Testimonials() {
               TESTIMONIALS
             </span>
           </span>
-          <h2 className="text-[clamp(32px,4vw,56px)] font-bricolage font-bold leading-[1.05] tracking-[-0.03em] mt-4 mb-6">
+          <h2 className="text-[32px] md:text-[clamp(32px,4vw,56px)] font-bricolage font-bold leading-[1.05] tracking-[-0.03em] mt-4 mb-6">
             Don&apos;t Take Our Word.{' '}
-            <span className="text-secondary-foreground italic font-medium">Take Theirs.</span>
+            <span className="text-chart-2 italic font-medium">Take Theirs.</span>
           </h2>
         </div>
       </div>
@@ -92,14 +92,14 @@ export default function Testimonials() {
         <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-bg to-transparent z-10 pointer-events-none" />
 
         {/* Row 1: Left moving */}
-        <div className="flex w-fit animate-marquee hover:[animation-play-state:paused] [animation-duration:50s] gap-4 md:gap-8 px-4 md:px-8">
+        <div className="flex w-fit animate-marquee hover:[animation-play-state:paused] [animation-duration:40s] md:[animation-duration:50s] gap-4 md:gap-8 px-4 md:px-8">
           {[...firstRow, ...firstRow, ...firstRow].map((review, idx) => (
             <div
               key={idx}
-              className="w-[280px] md:w-[420px] bg-white border border-border/80 rounded-[24px] p-6 md:p-8 flex flex-col relative overflow-hidden flex-shrink-0 shadow-[0_4px_20px_rgba(0,0,0,0.03)] card-hover"
+              className="w-[260px] md:w-[420px] bg-white border border-border/80 rounded-[24px] p-6 md:p-8 flex flex-col relative overflow-hidden flex-shrink-0 shadow-[0_4px_20px_rgba(0,0,0,0.03)] card-hover"
             >
               <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-5">
-                <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br ${review.gradient} flex items-center justify-center text-white font-bricolage font-bold text-[14px] md:text-[16px] flex-shrink-0 shadow-sm shadow-black/10`}>
+                <div className={`w-9 h-9 md:w-12 md:h-12 rounded-full bg-gradient-to-br ${review.gradient} flex items-center justify-center text-white font-bricolage font-bold text-[13px] md:text-[16px] flex-shrink-0 shadow-sm shadow-black/10`}>
                   {review.name.charAt(0)}
                 </div>
                 <div className="flex flex-col min-w-0">
@@ -122,14 +122,14 @@ export default function Testimonials() {
         </div>
 
         {/* Row 2: Right moving */}
-        <div className="flex w-fit animate-marquee-reverse hover:[animation-play-state:paused] [animation-duration:60s] gap-4 md:gap-8 px-4 md:px-8">
+        <div className="flex w-fit animate-marquee-reverse hover:[animation-play-state:paused] [animation-duration:45s] md:[animation-duration:60s] gap-4 md:gap-8 px-4 md:px-8">
           {[...secondRow, ...secondRow, ...secondRow].map((review, idx) => (
             <div
               key={idx}
-              className="w-[280px] md:w-[420px] bg-white border border-border/80 rounded-[24px] p-6 md:p-8 flex flex-col relative overflow-hidden flex-shrink-0 shadow-[0_4px_20px_rgba(0,0,0,0.03)] card-hover"
+              className="w-[260px] md:w-[420px] bg-white border border-border/80 rounded-[24px] p-6 md:p-8 flex flex-col relative overflow-hidden flex-shrink-0 shadow-[0_4px_20px_rgba(0,0,0,0.03)] card-hover"
             >
               <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-5">
-                <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br ${review.gradient} flex items-center justify-center text-white font-bricolage font-bold text-[14px] md:text-[16px] flex-shrink-0 shadow-sm shadow-black/10`}>
+                <div className={`w-9 h-9 md:w-12 md:h-12 rounded-full bg-gradient-to-br ${review.gradient} flex items-center justify-center text-white font-bricolage font-bold text-[13px] md:text-[16px] flex-shrink-0 shadow-sm shadow-black/10`}>
                   {review.name.charAt(0)}
                 </div>
                 <div className="flex flex-col min-w-0">
