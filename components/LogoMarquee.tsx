@@ -5,38 +5,38 @@ import React from 'react';
 const logos = [
   { 
     name: 'Hacken', 
-    src: '/marquee/hackenai-hai-logo.png', 
+    src: '/marquee/Hacken.png', 
     invert: false, 
-    industry: 'Cybersecurity', 
-    service: 'Full Stack Dev • Smart Contract Audit • Pentesting' 
+    industry: 'Cybersecurity & Web3 Infrastructure', 
+    service: 'Full-Stack Engineering • Smart Contract Audits • Enterprise Security' 
   },
   { 
-    name: 'Tokwealth', 
-    src: '/marquee/logo-new.png', 
+    name: 'TokWealth', 
+    src: '/marquee/TokWealth.png', 
     invert: true, 
-    industry: 'RWA Tokenization', 
-    service: 'Web3 App Dev • Fintech Integrations • Compliance & Security' 
+    industry: 'Real Estate Tokenization (RWA)', 
+    service: 'Asset Tokenization • Compliant Payment Stacks • Information Security' 
   },
   { 
     name: 'Magnetiq', 
-    src: '/marquee/199k4o-Logo.svg', 
+    src: '/marquee/Magnetiq.svg', 
     invert: false, 
-    industry: 'Web3 Engagement', 
-    service: 'Influencer Reward Platform • Blockchain • App Dev' 
+    industry: 'Web3 Engagement & Loyalty', 
+    service: 'Scalable Web3 Apps • Blockchain Architecture • Product Development' 
   },
   { 
     name: 'Strategy Connect', 
-    src: '/marquee/logo.svg', 
+    src: '/marquee/StrategyConnect.svg', 
     invert: false, 
-    industry: 'Strategy Consulting', 
-    service: 'SaaS Workflow • System Overhaul • Product Scalability' 
+    industry: 'Strategic Ecosystem Design', 
+    service: 'SaaS Workflow Optimization • System Overhauling • Product Strategy' 
   },
   { 
     name: 'SmartBike', 
-    src: '/marquee/Group-1707479361.png', 
+    src: '/marquee/SmartBike.png', 
     invert: true, 
-    industry: 'IoT Mobility', 
-    service: 'Hardware/Software Integration • App Dev • IoT Consulting' 
+    industry: 'IoT & Smart Mobility Solutions', 
+    service: 'Hardware-Software Integration • IoT Consulting • Ecosystem Development' 
   },
 ];
 

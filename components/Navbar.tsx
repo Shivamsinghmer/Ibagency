@@ -16,10 +16,9 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Services', href: '/#services' },
-    { name: 'Work', href: '/#work' },
-    { name: 'Pricing', href: '/#pricing' },
-    { name: 'Contact', href: '/#contact' },
+    { name: 'Our_Services', href: '/#services' },
+    { name: 'Case_Studies', href: '/#work' },
+    { name: 'Contact_Us', href: '/contact' },
   ];
 
   return (
@@ -54,9 +53,9 @@ export default function Navbar() {
 
         {/* Action Button & Mobile Toggle */}
         <div className="flex items-center gap-3 md:gap-4">
-          <button className="hidden sm:block bg-fg text-white rounded-full px-6 py-2.5 text-[13px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all">
-            Start a Project
-          </button>
+          <Link href="/contact" className="hidden sm:block bg-fg text-white rounded-full px-6 py-2.5 text-[13px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all">
+            Start Your Project
+          </Link>
 
           <button
             className="md:hidden relative z-50 p-2 -mr-2 text-fg focus:outline-none"
@@ -94,12 +93,13 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <button
-            className="w-full sm:hidden bg-fg text-white rounded-full px-6 py-3 text-[14px] font-medium active:scale-[0.98] transition-all"
+          <Link
+            href="/contact"
+            className="w-full sm:hidden bg-fg text-white rounded-full px-6 py-3 text-[14px] font-medium active:scale-[0.98] transition-all text-center"
             onClick={() => setIsOpen(false)}
           >
-            Start a Project
-          </button>
+            Start Your Project
+          </Link>
         </div>
       </div>
     </nav>

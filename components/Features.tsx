@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useInView } from '@/hooks/useInView';
-
+import Link from 'next/link';
 export default function Features() {
   const [ref, isInView] = useInView({ threshold: 0.1, once: true });
 
@@ -58,12 +58,12 @@ export default function Features() {
           <p className="text-muted text-[15px] leading-[1.8] mb-8 md:mb-10 max-w-sm">
             We don&apos;t just write code — we bring academic rigour, real-world experience, and genuine care to every product we help build.
           </p>
-          <a
-            href="#work"
-            className="group inline-flex items-center gap-2 bg-fg text-white rounded-full px-6 py-2.5 text-[13px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all"
+          <Link
+            href="/#work"
+            className="group inline-flex items-center gap-2 bg-fg text-white rounded-full px-6 py-2.5 text-[13px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all text-center"
           >
-            View our work
-          </a>
+            View Case Studies
+          </Link>
         </div>
 
         {/* Right Column - Numbered List */}
@@ -73,8 +73,7 @@ export default function Features() {
               key={idx}
               className="group py-5 md:py-6 border-b border-border last:border-0 grid grid-cols-[32px_1fr] gap-4 items-start hover:bg-white/50 -mx-2 md:-mx-4 px-2 md:px-4 rounded-xl transition-colors"
             >
-              <div className="flex flex-col items-center gap-2 pt-1">
-                <div className={`w-2 h-2 rounded-full ${feature.accent}`} />
+              <div className="flex flex-col items-center pt-1">
                 <span className="font-mono text-[11px] text-muted">{feature.id}</span>
               </div>
               <div>

@@ -10,7 +10,7 @@ export default function FAQ() {
   const faqs = [
     {
       q: 'How long does a typical project take?',
-      a: 'Timelines depend on scope. A focused MVP typically takes 6–10 weeks. A full SaaS product or mobile app is usually 12–20 weeks. We give you a detailed estimate before we start anything.',
+      a: 'Timelines depend on scope. A focused MVP typically takes 10–16 weeks. A full SaaS product or mobile app is usually 12–20 weeks. We give you a detailed estimate before we start anything.',
     },
     {
       q: 'What makes you different from other agencies?',

@@ -14,7 +14,6 @@ export default function Testimonials() {
     {
       name: 'Dyma Budorin',
       role: 'CEO, Hacken',
-      stars: 5,
       quote: 'Working with the team was seamless from day one. They understood our Web3 product deeply and delivered a polished internal tool on time.',
       image: 'https://i.pravatar.cc/150?u=1',
       gradient: 'from-[#4F46E5] to-[#7C3AED]',
@@ -22,49 +21,42 @@ export default function Testimonials() {
     {
       name: 'Alex Mitrev',
       role: 'Founder, Tokwealth',
-      stars: 5,
       quote: 'They turned a complex fintech concept into a clean, fast product. The design quality and frontend engineering were genuinely impressive.',
       image: 'https://i.pravatar.cc/150?u=2',
     },
     {
       name: 'Lena Krotova',
       role: 'Product Lead, Magnetiq Bank',
-      stars: 5,
       quote: "Our UX metrics improved significantly after the redesign. The team's attention to detail made the project effortless.",
       image: 'https://i.pravatar.cc/150?u=3',
     },
     {
       name: 'Marcus Chen',
       role: 'CTO, FinFlow',
-      stars: 5,
       quote: "The speed of delivery was unmatched. We went from idea to launch in record time with a rock-solid infrastructure.",
       image: 'https://i.pravatar.cc/150?u=4',
     },
     {
       name: 'Sarah Jenkins',
       role: 'Founder, Bloom',
-      stars: 5,
       quote: "Highly recommended for any high-growth startup looking for a reliable partner who actually understands business goals.",
       image: 'https://i.pravatar.cc/150?u=5',
     },
     {
       name: 'David Berg',
       role: 'Product Manager, SkyGrid',
-      stars: 5,
       quote: "They don't just build; they think along with you. Truly a strategic partner that added value at every stage of the process.",
       image: 'https://i.pravatar.cc/150?u=6',
     },
     {
       name: 'Elena Rodriguez',
       role: 'UX Lead, Velo',
-      stars: 5,
       quote: "The attention to detail in the UI was beyond our expectations. Our users love the new experience and engagement is up.",
       image: 'https://i.pravatar.cc/150?u=7',
     },
     {
       name: 'James Wilson',
       role: 'VP Engineering, Nexa',
-      stars: 5,
       quote: "Technical excellence combined with great communication. They're a rare find in the world of specialized dev agencies.",
       image: 'https://i.pravatar.cc/150?u=8',
     },
@@ -133,6 +125,14 @@ export default function Testimonials() {
                 <motion.div
                   key={`${reviewIdx}-${position}`}
                   layout
+                  drag={isMiddle ? "x" : false}
+                  dragConstraints={{ left: 0, right: 0 }}
+                  dragElastic={0.2}
+                  dragMomentum={false}
+                  onDragEnd={(_, info) => {
+                    if (info.offset.x < -70) nextSlide();
+                    if (info.offset.x > 70) prevSlide();
+                  }}
                   initial={{ opacity: 0, scale: 0.8, x: position === 0 ? -100 : position === 2 ? 100 : 0 }}
                   animate={{ 
                     opacity: isMiddle ? 1 : 0.4, 
@@ -146,7 +146,7 @@ export default function Testimonials() {
                     w-[calc(100vw-3rem)] sm:w-[350px] md:w-[420px] bg-white border border-border/80 rounded-[28px] md:rounded-[32px] p-7 md:p-10 
                     flex flex-col relative overflow-hidden flex-shrink-0 
                     shadow-[0_4px_32px_rgba(0,0,0,0.06)] 
-                    ${!isMiddle ? 'hidden md:flex pointer-events-none' : 'flex'}
+                    ${!isMiddle ? 'hidden md:flex pointer-events-none' : 'flex cursor-grab active:cursor-grabbing'}
                   `}
                 >
                   <div className="flex items-center gap-4 mb-6">
@@ -162,13 +162,7 @@ export default function Testimonials() {
                       <p className="text-[13px] md:text-[14px] text-muted-foreground truncate">{review.role}</p>
                     </div>
                   </div>
-                  <div className="flex gap-0.5 text-[#FFB800] mb-5">
-                    {[...Array(review.stars)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                      </svg>
-                    ))}
-                  </div>
+
                   <p className="text-[15px] md:text-[17px] text-muted-foreground leading-[1.6] md:leading-[1.8] font-medium">
                     &ldquo;{review.quote}&rdquo;
                   </p>

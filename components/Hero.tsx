@@ -1,12 +1,12 @@
 'use client';
 
-import React from 'react';
+import Link from 'next/link';
 import { motion } from 'motion/react';
 
 export default function Hero() {
   return (
     <section id="home" className="relative bg-bg scroll-mt-20 overflow-hidden pt-20 md:pt-22 pb-15 md:pb-20">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -31,12 +31,12 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 animate-fade-up [animation-delay:300ms] w-full sm:w-auto px-4 sm:px-0">
-          <button className="w-full sm:w-auto bg-fg text-white rounded-full px-10 py-4 text-[15px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10 group">
-            Start a Project
-          </button>
-          <button className="w-full sm:w-auto bg-fg text-white rounded-full px-10 py-4 text-[15px] font-medium hover:bg-white active:scale-[0.98] transition-all shadow-sm">
-            View Our Work
-          </button>
+          <Link href="/#services" className="w-full sm:w-auto bg-fg text-white rounded-full px-10 py-4 text-[15px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10 group text-center">
+            Our Services
+          </Link>
+          <Link href="/#work" className="w-full sm:w-auto bg-fg text-white rounded-full px-10 py-4 text-[15px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10 group text-center">
+            View Case Studies
+          </Link>
         </div>
 
         <div className="flex flex-wrap items-center justify-center pb-5 gap-x-8 sm:gap-x-16 md:gap-x-24 gap-y-6 sm:gap-y-8 animate-fade-up [animation-delay:400ms]">

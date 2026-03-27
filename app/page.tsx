@@ -5,8 +5,8 @@ import Features from '@/components/Features';
 import Services from '@/components/Services';
 import Projects from '@/components/Projects';
 import Testimonials from '@/components/Testimonials';
-import FAQ from '@/components/FAQ';
 import CTA from '@/components/CTA';
+import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 
 

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useInView } from '@/hooks/useInView';
 import { services } from './servicesData';
 import ServiceCard from './ServiceCard';
-import { MonitorPlay, Bot, BrainCircuit, Smartphone, Cloud, Database, Cpu, Globe, Lock, Code2, Users2, LineChart, Infinity, Rocket } from 'lucide-react';
+import { MonitorPlay, Bot, BrainCircuit, Smartphone, Cloud, Database, Cpu, Globe, Lock, Code2, Users2, LineChart, Infinity, Rocket, Coins, BarChart3 } from 'lucide-react';
 
 export default function Services() {
   const [ref, isInView] = useInView({ threshold: 0.1, once: true });
@@ -18,6 +18,8 @@ export default function Services() {
     { ...services.find(s => s.title === 'Cloud Architecture'), icon: Cloud, bg: 'bg-[#e6f8f5] border border-border/50 text-fg' },
     { ...services.find(s => s.title === 'Web3 & dApp Development'), icon: Cpu, bg: 'bg-[#f4fcff] border border-border text-fg', featured: true },
     { ...services.find(s => s.title === 'Enterprise Solutions'), icon: Lock, bg: 'bg-white border border-border text-fg' },
+    { ...services.find(s => s.title === 'RWA & Tokenization'), icon: Coins, bg: 'bg-[#e8f0ff] border border-border/50 text-fg' },
+    { ...services.find(s => s.title === 'Trading Algos & Platforms'), icon: BarChart3, bg: 'bg-[#fff4fc] border border-border/50 text-fg' },
     { ...services.find(s => s.title === 'Data Engineering'), icon: Database, bg: 'bg-[#f4fcff] border border-border text-fg' },
     { ...services.find(s => s.title === 'API Development'), icon: Code2, bg: 'bg-[#e8f0ff] border border-border/50 text-fg' },
     { ...services.find(s => s.title === 'Staff Augmentation'), icon: Users2, bg: 'bg-white border border-border text-fg' },
@@ -52,9 +54,9 @@ export default function Services() {
         </div>
 
         <div className="flex justify-center animate-fade-up [animation-delay:300ms]">
-          <button className="bg-fg text-white rounded-full px-10 py-3.5 text-[14px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10">
+          <Link href="/contact" className="bg-fg text-white rounded-full px-10 py-3.5 text-[14px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10 text-center">
             Start Your Project
-          </button>
+          </Link>
         </div>
       </div>
     </section>

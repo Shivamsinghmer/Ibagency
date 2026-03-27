@@ -9,7 +9,7 @@ export default function Footer() {
   const links = [
     { name: 'Services', href: '/#services' },
     { name: 'Work', href: '/#work' },
-    { name: 'Pricing', href: '/#pricing' },
+    { name: 'Contact', href: '/contact' },
     { name: 'FAQ', href: '/#faq' },
     { name: 'Terms', href: '/terms' },
     { name: 'Privacy', href: '/privacy' },

@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import Link from 'next/link';
 import { useInView } from '@/hooks/useInView';
 
 export default function CTA() {
@@ -20,12 +20,9 @@ export default function CTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="w-full sm:w-auto bg-fg text-white rounded-full px-8 py-3.5 text-[14px] font-semibold hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10 group">
-              Start a Project 
-            </button>
-            <button className="w-full sm:w-auto bg-white/80 backdrop-blur border border-border/50 text-fg rounded-full px-8 py-3.5 text-[14px] font-medium hover:bg-white transition-all active:scale-[0.98]">
-              View Our Work
-            </button>
+            <Link href="/contact" className="w-full sm:w-auto bg-fg text-white rounded-full px-8 py-3.5 text-[14px] font-semibold hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10 group text-center">
+              Start Your Project
+            </Link>
           </div>
         </div>
       </div>

@@ -57,7 +57,7 @@ export const services = [
     title: 'DevOps & CI/CD',
     desc: 'Automate your release cycles and improve deployment reliability with modern CI/CD pipelines, Docker, and Kubernetes management.',
     type: 'purple',
-    tags: ['Github Actions', 'Docker', 'Kubernetes', 'CI/CD'],
+    tags: ['Github', 'Docker', 'Kubernetes', 'CI/CD'],
   },
   {
     title: 'MVP Development',
@@ -70,5 +70,23 @@ export const services = [
     desc: 'Specialized blockchain development from smart contracts to decentralized apps, with deep experience in DeFi and NFT ecosystems.',
     type: 'dark',
     tags: ['Solidity', 'Ethers.js', 'Wagmi', 'Polygon', 'Ethereum'],
+  },
+  {
+    title: 'Enterprise Solutions',
+    desc: 'Bespoke software ecosystems designed for enterprise scale. We focus on legacy integration, complex workflows, and robust security standards.',
+    type: 'dark',
+    tags: ['Architecture', 'Scalability', 'Security', 'Enterprise'],
+  },
+  {
+    title: 'RWA & Tokenization',
+    desc: 'Bringing real-world assets on-chain. We build compliant tokenization platforms for real estate, art, and financial instruments.',
+    type: 'purple',
+    tags: ['RWA', 'Smart Contracts', 'Legal-Tech', 'Blockchain'],
+  },
+  {
+    title: 'Trading Algos & Platforms',
+    desc: 'High-frequency trading infrastructure, custom execution algorithms, and sophisticated fintech dashboards for modern markets.',
+    type: 'dark',
+    tags: ['Quant', 'Fintech', 'Low-Latency', 'Execution'],
   },
 ];
