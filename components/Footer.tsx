@@ -40,15 +40,6 @@ export default function Footer() {
               </Link>
             ))}
           </div>
-
-          <Link
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@codemonks.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-fg text-white rounded-full px-8 py-2.5 text-[13px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all shadow-minimal"
-          >
-            Email Us
-          </Link>
         </div>
 
         {/* Copyright */}

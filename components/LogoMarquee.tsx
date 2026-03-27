@@ -58,12 +58,12 @@ export default function LogoMarquee() {
               key={idx}
               className="flex flex-col items-center justify-center flex-shrink-0 min-w-[200px] md:min-w-[350px] transition-all duration-300 group/logo"
             >
-              <div className="h-8 md:h-12 flex items-center justify-center mb-4">
+              <div className={`${logo.name === 'TokWealth' ? 'h-16 md:h-20' : 'h-8 md:h-12'} flex items-center justify-center mb-4`}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   src={logo.src} 
                   alt={logo.name} 
-                  className="h-full w-auto object-contain transition-all duration-300 opacity-80 group-hover/logo:opacity-100 scale-95 group-hover/logo:scale-100"
+                  className={`h-full w-auto object-contain transition-all duration-300 ${logo.name === 'TokWealth' ? 'opacity-100 scale-100' : 'opacity-80 scale-95 group-hover/logo:opacity-100 group-hover/logo:scale-100'}`}
                   style={{
                     filter: logo.invert ? 'brightness(0)' : undefined,
                   }}
@@ -71,8 +71,8 @@ export default function LogoMarquee() {
                 />
               </div>
               <div className="text-center opacity-70 group-hover/logo:opacity-100 transition-all duration-300 transform scale-95 group-hover/logo:scale-100 max-w-[280px] md:max-w-[400px]">
-                <p className="text-[11px] md:text-[13px] font-bold text-fg leading-tight mb-1.5">{logo.industry}</p>
-                <p className="text-[10px] md:text-[11px] text-muted-foreground font-medium uppercase tracking-wider leading-relaxed">{logo.service}</p>
+                <p className={`${logo.name === 'TokWealth' ? 'text-[13px] md:text-[15px]' : 'text-[11px] md:text-[13px]'} font-bold text-fg leading-tight mb-1.5`}>{logo.industry}</p>
+                <p className={`${logo.name === 'TokWealth' ? 'text-[11px] md:text-[12px]' : 'text-[10px] md:text-[11px]'} text-muted-foreground font-medium uppercase tracking-wider leading-relaxed`}>{logo.service}</p>
               </div>
             </div>
           ))}
