@@ -3,8 +3,24 @@
 import React from 'react';
 import { useInView } from '@/hooks/useInView';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
 export default function Features() {
   const [ref, isInView] = useInView({ threshold: 0.1, once: true });
+  const pathname = usePathname();
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('/#') && pathname === '/') {
+      const targetId = href.replace('/#', '');
+      const element = document.getElementById(targetId);
+      
+      if (element) {
+        e.preventDefault();
+        element.scrollIntoView({ behavior: 'smooth' });
+        window.history.pushState(null, '', href);
+      }
+    }
+  };
 
   const features = [
     {
@@ -60,9 +76,10 @@ export default function Features() {
           </p>
           <Link
             href="/#work"
+            onClick={(e) => handleLinkClick(e, '/#work')}
             className="group inline-flex items-center gap-2 bg-fg text-white rounded-full px-6 py-2.5 text-[13px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all text-center"
           >
-            View Case Studies
+            Case Studies
           </Link>
         </div>
 

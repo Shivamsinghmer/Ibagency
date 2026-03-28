@@ -34,17 +34,18 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
       style={{ '--delay': `${index * 50}ms` } as any}
     >
       <div>
-        <div className="flex items-start justify-between mb-3">
+        <div className="flex items-start justify-between mb-3 gap-2">
           {Icon && (
-            <div className={`w-8 h-8 rounded-lg flex items-center justify-center transition-colors ${isDark ? 'bg-white/5 border border-white/10 text-white/80 group-hover:bg-white/10 group-hover:text-white' : 'bg-fg/5 border border-fg/10 text-fg'}`}>
+            <div className={`shrink-0 w-8 h-8 rounded-lg flex items-center justify-center transition-colors ${isDark ? 'bg-white/5 border border-white/10 text-white/80 group-hover:bg-white/10 group-hover:text-white' : 'bg-fg/5 border border-fg/10 text-fg'}`}>
               <Icon size={16} strokeWidth={1.5} />
             </div>
           )}
-          <div className="flex flex-wrap gap-1 justify-end max-w-[60%]">
+          <div className="flex flex-nowrap gap-1 pr-1 justify-end overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
             {visibleTags.map((tag) => (
               <span 
                 key={tag} 
                 className={`
+                  whitespace-nowrap shrink-0
                   text-[9px] font-mono px-2 py-0.5 rounded-full uppercase tracking-tight
                   ${isDark ? 'bg-white/5 text-white/40 border border-white/5' : 'bg-fg/5 text-muted border border-border/30'}
                 `}

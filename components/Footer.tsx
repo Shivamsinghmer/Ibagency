@@ -2,9 +2,11 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const pathname = usePathname();
 
   const links = [
     { name: 'Services', href: '/#services' },
@@ -15,11 +17,30 @@ export default function Footer() {
     { name: 'Privacy', href: '/privacy' },
   ];
 
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('/#')) {
+      const targetId = href.replace('/#', '');
+      const element = document.getElementById(targetId);
+      
+      if (pathname === '/') {
+        e.preventDefault();
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+          window.history.pushState(null, '', href);
+        }
+      }
+    } else if (href === '/' && pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.history.pushState(null, '', href);
+    }
+  };
+
   return (
     <footer className="bg-bg border-t border-border py-12 px-6">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Logo only, large and clear */}
-        <Link href="/" className="inline-block group">
+        <Link href="/" className="inline-block group" onClick={(e) => handleLinkClick(e, '/')}>
           <img
             src="/agencyLogo.png"
             alt="CodeMonks Logo"
@@ -34,6 +55,7 @@ export default function Footer() {
               <Link
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleLinkClick(e, link.href)}
                 className="hover:text-fg transition-colors uppercase tracking-widest font-mono text-[11px]"
               >
                 {link.name}

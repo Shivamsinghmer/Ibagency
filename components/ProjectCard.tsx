@@ -58,7 +58,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           ))}
         </div>
         <span className={`text-[12px] font-medium flex items-center gap-1 group-hover:gap-2 transition-all ${isDark ? 'text-white' : 'text-fg'}`}>
-          View Case Study
+          Case Studies
         </span>
       </div>
     </Link>

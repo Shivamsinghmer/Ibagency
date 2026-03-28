@@ -2,10 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,10 +19,27 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Our_Services', href: '/#services' },
-    { name: 'Case_Studies', href: '/#work' },
-    { name: 'Contact_Us', href: '/contact' },
+    { name: 'Our Services', href: '/#services' },
+    { name: 'Case Studies', href: '/#work' },
+    { name: 'Contact Us', href: '/contact' },
   ];
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    setIsOpen(false);
+
+    if (href.startsWith('/#')) {
+      const targetId = href.replace('/#', '');
+      const element = document.getElementById(targetId);
+      
+      if (pathname === '/') {
+        e.preventDefault();
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+          window.history.pushState(null, '', href);
+        }
+      }
+    }
+  };
 
   return (
     <nav
@@ -30,7 +50,7 @@ export default function Navbar() {
     >
       <div className="max-w-5xl mx-auto px-4 md:px-6 h-16 md:h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center group" onClick={() => setIsOpen(false)}>
+        <Link href="/" className="flex items-center group" onClick={(e) => handleLinkClick(e, '/')}>
           <img
             src="/agencyLogo.png"
             alt="CodeMonks Logo"
@@ -44,6 +64,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
+              onClick={(e) => handleLinkClick(e, link.href)}
               className="text-[13px] text-muted-foreground hover:text-fg transition-colors duration-200 uppercase tracking-widest font-mono font-medium"
             >
               {link.name}
@@ -87,7 +108,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => handleLinkClick(e, link.href)}
               className="text-[14px] text-muted-foreground hover:text-fg transition-colors uppercase tracking-widest font-mono font-medium block w-full"
             >
               {link.name}

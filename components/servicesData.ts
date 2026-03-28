@@ -75,7 +75,7 @@ export const services = [
     title: 'Enterprise Solutions',
     desc: 'Bespoke software ecosystems designed for enterprise scale. We focus on legacy integration, complex workflows, and robust security standards.',
     type: 'dark',
-    tags: ['Architecture', 'Scalability', 'Security', 'Enterprise'],
+    tags: ['Architecture', 'Scale', 'Security', 'Enterprise'],
   },
   {
     title: 'RWA & Tokenization',
