@@ -7,7 +7,7 @@ const logos = [
     name: 'Hacken', 
     src: '/marquee/Hacken.png', 
     invert: false, 
-    industry: 'Cybersecurity & Web3 Infrastructure', 
+    industry: 'Cybersecurity', 
     service: 'Full-Stack Engineering • Smart Contract Audits • Enterprise Security' 
   },
   { 
@@ -21,19 +21,19 @@ const logos = [
     name: 'Magnetiq', 
     src: '/marquee/Magnetiq.svg', 
     invert: false, 
-    industry: 'Web3 Engagement & Loyalty', 
+    industry: 'Web3 Engagement & Loyalty Reward', 
     service: 'Scalable Web3 Apps • Blockchain Architecture • Product Development' 
   },
   { 
     name: 'Strategy Connect', 
     src: '/marquee/StrategyConnect.svg', 
     invert: false, 
-    industry: 'Strategic Ecosystem Design', 
+    industry: 'SaaS Platform Development', 
     service: 'SaaS Workflow Optimization • System Overhauling • Product Strategy' 
   },
   { 
     name: 'SmartBike', 
-    src: '/marquee/SmartBike.png', 
+    src: '/marquee/Smartbike.png', 
     invert: true, 
     industry: 'IoT & Smart Mobility Solutions', 
     service: 'Hardware-Software Integration • IoT Consulting • Ecosystem Development' 

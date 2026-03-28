@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { useInView } from '@/hooks/useInView';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+
 import Image from 'next/image';
 
 export default function Testimonials() {
@@ -12,14 +13,7 @@ export default function Testimonials() {
 
   const reviews = [
     {
-      name: 'Dyma Budorin',
-      role: 'CEO, Hacken',
-      quote: 'Working with the team was seamless from day one. They understood our Web3 product deeply and delivered a polished internal tool on time.',
-      image: 'https://i.pravatar.cc/150?u=1',
-      gradient: 'from-[#4F46E5] to-[#7C3AED]',
-    },
-    {
-      name: 'Alex Mitrev',
+      name: 'Amit Jain',
       role: 'Founder, Tokwealth',
       quote: 'They turned a complex fintech concept into a clean, fast product. The design quality and frontend engineering were genuinely impressive.',
       image: 'https://i.pravatar.cc/150?u=2',
@@ -31,32 +25,26 @@ export default function Testimonials() {
       image: 'https://i.pravatar.cc/150?u=3',
     },
     {
-      name: 'Marcus Chen',
-      role: 'CTO, FinFlow',
+      name: 'Kaylan Sliney',
+      role: 'Founder, MagnetIQ',
       quote: "The speed of delivery was unmatched. We went from idea to launch in record time with a rock-solid infrastructure.",
       image: 'https://i.pravatar.cc/150?u=4',
     },
     {
-      name: 'Sarah Jenkins',
-      role: 'Founder, Bloom',
+      name: 'Greg LaVecchia',
+      role: 'Founder, Bloom Nutrition',
       quote: "Highly recommended for any high-growth startup looking for a reliable partner who actually understands business goals.",
       image: 'https://i.pravatar.cc/150?u=5',
     },
     {
-      name: 'David Berg',
-      role: 'Product Manager, SkyGrid',
+      name: 'Haninder Pal Singh',
+      role: 'Founder, StrategyConnect',
       quote: "They don't just build; they think along with you. Truly a strategic partner that added value at every stage of the process.",
       image: 'https://i.pravatar.cc/150?u=6',
     },
     {
-      name: 'Elena Rodriguez',
-      role: 'UX Lead, Velo',
-      quote: "The attention to detail in the UI was beyond our expectations. Our users love the new experience and engagement is up.",
-      image: 'https://i.pravatar.cc/150?u=7',
-    },
-    {
-      name: 'James Wilson',
-      role: 'VP Engineering, Nexa',
+      name: 'Dharmin Dontamsetti',
+      role: 'Founder, SmartBike',
       quote: "Technical excellence combined with great communication. They're a rare find in the world of specialized dev agencies.",
       image: 'https://i.pravatar.cc/150?u=8',
     },
@@ -68,6 +56,26 @@ export default function Testimonials() {
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + reviews.length) % reviews.length);
+  };
+
+  const avatarColors = [
+    { bg: 'bg-[#e8f0ff]', text: 'text-blue-600', border: 'border-blue-200' },
+    { bg: 'bg-[#fff4fc]', text: 'text-pink-600', border: 'border-pink-200' },
+    { bg: 'bg-[#e6f8f5]', text: 'text-teal-600', border: 'border-teal-200' },
+    { bg: 'bg-[#faf5ff]', text: 'text-purple-600', border: 'border-purple-200' },
+    { bg: 'bg-[#f0fdf4]', text: 'text-green-600', border: 'border-green-200' },
+    { bg: 'bg-[#fff7ed]', text: 'text-orange-600', border: 'border-orange-200' },
+  ];
+
+  const getAvatarColor = (name: string) => {
+    const hash = name.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+    return avatarColors[hash % avatarColors.length];
+  };
+
+  const getInitials = (name: string) => {
+    const parts = name.split(' ');
+    if (parts.length >= 2) return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    return name.slice(0, 2).toUpperCase();
   };
 
   // Helper to get cards to display
@@ -83,7 +91,7 @@ export default function Testimonials() {
   const visibleIndices = getVisibleCards();
 
   return (
-    <section id="testimonials" className="py-12 md:py-16 bg-bg overflow-hidden" ref={ref}>
+    <section id="testimonials" className="pt-12 pb-4 md:pt-16 md:pb-8 bg-bg overflow-hidden" ref={ref}>
       <div className={`max-w-5xl mx-auto px-6 mb-16 transition-all duration-700 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         <div className="text-center relative">
           <span className="inline-flex items-center gap-2 mb-5">
@@ -150,12 +158,8 @@ export default function Testimonials() {
                   `}
                 >
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 shadow-sm shadow-black/10 border border-border/50">
-                      <img 
-                        src={review.image} 
-                        alt={review.name}
-                        className="w-full h-full object-cover"
-                      />
+                    <div className={`w-12 h-12 rounded-full ${getAvatarColor(review.name).bg} ${getAvatarColor(review.name).text} ${getAvatarColor(review.name).border} border flex items-center justify-center font-bold text-[14px] flex-shrink-0 shadow-sm font-mono`}>
+                      {getInitials(review.name)}
                     </div>
                     <div className="flex flex-col min-w-0">
                       <h3 className="font-bricolage font-bold text-fg text-[16px] md:text-[18px] leading-tight truncate">{review.name}</h3>
@@ -190,7 +194,7 @@ export default function Testimonials() {
       </div>
       
       {/* Visual Indicator Dots */}
-      <div className="flex justify-center gap-2 mt-20 md:mt-16">
+      <div className="flex justify-center gap-2 mt-12 md:mt-10">
         {reviews.map((_, idx) => (
           <button
             key={idx}
