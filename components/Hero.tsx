@@ -46,18 +46,18 @@ export default function Hero() {
           From ambitious startups building their first MVP to established companies scaling their product with flexible and talented outsourced teams <br /> We bring strategy, design, and engineering together.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 animate-fade-up [animation-delay:300ms] w-full sm:w-auto px-4 sm:px-0">
+        <div className="flex flex-row items-center justify-center gap-2.5 mb-10 animate-fade-up [animation-delay:300ms] w-full sm:w-auto px-4 sm:px-0">
           <Link 
             href="/#services" 
             onClick={(e) => handleLinkClick(e, '/#services')}
-            className="w-full sm:w-auto bg-fg text-white rounded-full px-10 py-4 text-[15px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10 group text-center"
+            className="flex-1 sm:flex-none bg-fg text-white rounded-full px-5 py-3 md:px-10 md:py-4 text-[13px] md:text-[15px] font-semibold hover:bg-fg/90 active:scale-[0.98] transition-all shadow-xl shadow-fg/10 text-center whitespace-nowrap"
           >
             Our Services
           </Link>
           <Link 
             href="/#work" 
             onClick={(e) => handleLinkClick(e, '/#work')}
-            className="w-full sm:w-auto bg-fg text-white rounded-full px-10 py-4 text-[15px] font-medium hover:bg-fg/90 active:scale-[0.98] transition-all shadow-lg shadow-fg/10 group text-center"
+            className="flex-1 sm:flex-none bg-fg text-white rounded-full px-5 py-3 md:px-10 md:py-4 text-[13px] md:text-[15px] font-semibold hover:bg-fg/90 active:scale-[0.98] transition-all shadow-xl shadow-fg/10 text-center whitespace-nowrap"
           >
             Case Studies
           </Link>
