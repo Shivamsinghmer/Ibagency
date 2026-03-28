@@ -12,7 +12,7 @@ const logos = [
   },
   { 
     name: 'TokWealth', 
-    src: '/marquee/TokWealth.png', 
+    src: '/marquee/tokWealth.png', 
     invert: true, 
     industry: 'Real Estate Tokenization (RWA)', 
     service: 'Asset Tokenization • Compliant Payment Stacks • Information Security' 
