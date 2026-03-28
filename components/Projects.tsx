@@ -9,7 +9,7 @@ export default function Projects() {
   const [ref, isInView] = useInView({ threshold: 0.1, once: true });
 
   return (
-    <section id="work" className="py-12 md:py-32 bg-bg px-6 scroll-mt-20" ref={ref}>
+    <section id="work" className="py-10 md:py-16 bg-bg px-6 scroll-mt-20" ref={ref}>
       <div className={`max-w-5xl mx-auto transition-all duration-700 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         <div className="mb-10 md:mb-16 text-left">
           <span className="inline-flex items-center gap-2 mb-5">

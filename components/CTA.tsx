@@ -7,7 +7,7 @@ export default function CTA() {
   const [ref, isInView] = useInView({ threshold: 0.15, once: true });
 
   return (
-    <section className="py-12 md:py-24 px-4 md:px-6 bg-bg" ref={ref}>
+    <section className="py-10 md:py-16 px-4 md:px-6 bg-bg" ref={ref}>
       <div className="max-w-6xl mx-auto bg-gradient-to-br from-[#e8f0ff] via-[#e6f8f5] to-[#f4fcff] rounded-[28px] md:rounded-[40px] relative overflow-hidden py-12 md:py-32 px-6 md:px-16 border border-border/50">
         {/* Decorative elements removed for minimal aesthetic */}
         <div className={`relative z-10 text-center transition-all duration-1000 ease-out ${isInView ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'}`}>

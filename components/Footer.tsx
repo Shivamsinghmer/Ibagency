@@ -9,9 +9,9 @@ export default function Footer() {
   const pathname = usePathname();
 
   const links = [
-    { name: 'Services', href: '/#services' },
-    { name: 'Work', href: '/#work' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Our Services', href: '/#services' },
+    { name: 'Case Studies', href: '/#work' },
+    { name: 'Contact Us', href: '/contact' },
     { name: 'FAQ', href: '/#faq' },
     { name: 'Terms', href: '/terms' },
     { name: 'Privacy', href: '/privacy' },

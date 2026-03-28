@@ -21,7 +21,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative bg-bg scroll-mt-20 overflow-hidden pt-20 md:pt-22 pb-15 md:pb-20">
+    <section id="home" className="relative bg-bg scroll-mt-20 overflow-hidden pt-20 md:pt-22 pb-10 md:pb-12">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

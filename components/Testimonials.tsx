@@ -83,7 +83,7 @@ export default function Testimonials() {
   const visibleIndices = getVisibleCards();
 
   return (
-    <section id="testimonials" className="py-24 md:py-32 bg-bg overflow-hidden" ref={ref}>
+    <section id="testimonials" className="py-12 md:py-16 bg-bg overflow-hidden" ref={ref}>
       <div className={`max-w-5xl mx-auto px-6 mb-16 transition-all duration-700 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         <div className="text-center relative">
           <span className="inline-flex items-center gap-2 mb-5">

@@ -56,7 +56,7 @@ export default function Features() {
   ];
 
   return (
-    <section className="py-12 md:py-32 bg-bg px-6 overflow-hidden scroll-mt-20" ref={ref} id="about">
+    <section className="py-10 md:py-16 bg-bg px-6 overflow-hidden scroll-mt-20" ref={ref} id="about">
       <div className={`max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_3fr] items-start gap-12 md:gap-16 transition-all duration-700 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
 
         {/* Left Column - Sticky */}

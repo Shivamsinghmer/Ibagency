@@ -42,7 +42,7 @@ const logos = [
 
 export default function LogoMarquee() {
   return (
-    <section className="py-12 md:py-20 bg-bg overflow-hidden">
+    <section className="py-8 md:py-12 bg-bg overflow-hidden">
       <div className="max-w-5xl mx-auto px-6 mb-12 text-center">
         <p className="text-[12px] font-mono tracking-[0.2em] uppercase text-muted-foreground font-bold">
           Trusted by innovative companies

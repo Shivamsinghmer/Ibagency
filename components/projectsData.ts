@@ -28,7 +28,7 @@ export const projects: Project[] = [
     sections: [
       {
         title: 'Project Overview',
-        content: 'Smartbike Mobility is a full-stack self-rental urban mobility platform designed to support large-scale bike-sharing operations.\n\nThe system enables users to locate, unlock, and rent bicycles via mobile applications, while providing operators with real-time visibility into fleet usage, performance, and system health.\n\nNuvanta AI was responsible for designing and building the platform end to end—from customer-facing applications and IoT integration to backend services and analytics infrastructure.'
+        content: 'Smartbike Mobility is a full-stack self-rental urban mobility platform designed to support large-scale bike-sharing operations.\n\nThe system enables users to locate, unlock, and rent bicycles via mobile applications, while providing operators with real-time visibility into fleet usage, performance, and system health.\n\nWe were responsible for designing and building the platform end to end—from customer-facing applications and IoT integration to backend services and analytics infrastructure.'
       },
       {
         title: 'The Problem',
@@ -44,7 +44,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Outcome & What This Represents',
-        content: 'The result was a production-ready urban mobility platform capable of supporting real-world deployments. The system successfully integrated mobile applications, IoT devices, backend services, and analytics into a cohesive platform designed for continuous operation at scale.\n\nSmartbike Mobility reflects Nuvanta AI\'s approach to engineering:\n• Building systems that operate reliably beyond controlled environments\n• Treating architecture and ownership as first-class concerns\n• Designing for long-term operation, not short-term demos'
+        content: 'The result was a production-ready urban mobility platform capable of supporting real-world deployments. The system successfully integrated mobile applications, IoT devices, backend services, and analytics into a cohesive platform designed for continuous operation at scale.\n\nSmartbike Mobility reflects our approach to engineering:\n• Building systems that operate reliably beyond controlled environments\n• Treating architecture and ownership as first-class concerns\n• Designing for long-term operation, not short-term demos'
       }
     ],
     tags: ['Flutter', 'Angular', 'Node.js', 'AWS', 'IoT'],
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     sections: [
       {
         title: 'Project Overview',
-        content: 'MagnetIQ is a loyalty-driven community platform that enables brands to build deeper relationships with their customers through blockchain-based memberships and digital assets. Rather than replacing familiar Web2 experiences, MagnetIQ bridges them with Web3 ownership models — making blockchain genuinely accessible to everyday consumers.\n\nNuvanta AI designed and developed the MVP end to end, delivering a platform that feels as intuitive as a standard web app while putting real digital ownership in the hands of users.'
+        content: 'MagnetIQ is a loyalty-driven community platform that enables brands to build deeper relationships with their customers through blockchain-based memberships and digital assets. Rather than replacing familiar Web2 experiences, MagnetIQ bridges them with Web3 ownership models — making blockchain genuinely accessible to everyday consumers.\n\nWe designed and developed the MVP end to end, delivering a platform that feels as intuitive as a standard web app while putting real digital ownership in the hands of users.'
       },
       {
         title: 'The Problem',
@@ -78,7 +78,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Outcome & What This Represents',
-        content: 'Nuvanta AI delivered a functional, production-ready MVP that validates MagnetIQ\'s approach to loyalty and community engagement. The platform successfully demonstrates that blockchain-based ownership can be made accessible to mainstream consumers.\n\nMagnetIQ reflects our ability to operate at the frontier of emerging technology without losing sight of the end user. We build products that are technically sophisticated where it matters, and invisible where it doesn\'t.'
+        content: 'We delivered a functional, production-ready MVP that validates MagnetIQ\'s approach to loyalty and community engagement. The platform successfully demonstrates that blockchain-based ownership can be made accessible to mainstream consumers.\n\nMagnetIQ reflects our ability to operate at the frontier of emerging technology without losing sight of the end user. We build products that are technically sophisticated where it matters, and invisible where it doesn\'t.'
       }
     ],
     tags: ['Web3', 'Flow Network', 'NFTs', 'Dapper', 'Full-stack'],
@@ -96,7 +96,7 @@ export const projects: Project[] = [
     sections: [
       {
         title: 'Project Overview',
-        content: 'Sawal AI is an AI-powered platform built for small and medium businesses — helping them automate conversations, unlock knowledge faster, and produce content without the manual overhead. Rather than offering a single AI feature, Sawal AI brings together voice agents, intelligent chat, content transcription, and social media workflows into one cohesive product.\n\nNuvanta AI designed and built the AI systems at the core of the platform, integrating them directly into real customer-facing workflows.'
+        content: 'Sawal AI is an AI-powered platform built for small and medium businesses — helping them automate conversations, unlock knowledge faster, and produce content without the manual overhead. Rather than offering a single AI feature, Sawal AI brings together voice agents, intelligent chat, content transcription, and social media workflows into one cohesive product.\n\nWe designed and built the AI systems at the core of the platform, integrating them directly into real customer-facing workflows.'
       },
       {
         title: 'The Problem',
@@ -112,7 +112,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Outcome & What This Represents',
-        content: 'Nuvanta AI delivered a suite of production-ready AI systems embedded into real customer workflows — improving automation, reducing manual effort, and accelerating content velocity for the businesses using the platform.\n\nSawal AI reflects our approach to applied AI: building systems that solve real operational problems, integrate cleanly into existing workflows, and hold up under everyday use.'
+        content: 'We delivered a suite of production-ready AI systems embedded into real customer workflows — improving automation, reducing manual effort, and accelerating content velocity for the businesses using the platform.\n\nSawal AI reflects our approach to applied AI: building systems that solve real operational problems, integrate cleanly into existing workflows, and hold up under everyday use.'
       }
     ],
     tags: ['Azure OpenAI', 'Node.js', 'React', 'PostgreSQL', 'AWS'],
@@ -130,7 +130,7 @@ export const projects: Project[] = [
     sections: [
       {
         title: 'Project Overview',
-        content: 'HCode is a comprehensive AI-powered process automation suite built on n8n, designed to help businesses eliminate manual overhead, connect their systems intelligently, and let workflows run themselves. It\'s not just automation — it\'s automation that thinks, routes, and adapts based on the context of each process.\n\nNuvanta AI designed and implemented the platform end to end, delivering custom AI-driven workflows integrated directly into HCode\'s existing business operations.'
+        content: 'HCode is a comprehensive AI-powered process automation suite built on n8n, designed to help businesses eliminate manual overhead, connect their systems intelligently, and let workflows run themselves. It\'s not just automation — it\'s automation that thinks, routes, and adapts based on the context of each process.\n\nWe designed and implemented the platform end to end, delivering custom AI-driven workflows integrated directly into HCode\'s existing business operations.'
       },
       {
         title: 'The Problem',
@@ -146,7 +146,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Outcome & What This Represents',
-        content: 'Nuvanta AI delivered a production-ready AI automation suite that measurably reduced manual operations across HCode\'s business processes. Workflows that previously required human coordination now run automatically.\n\nHCode reflects our ability to take complex, multi-system operational problems and reduce them to something clean, manageable, and self-running.'
+        content: 'We delivered a production-ready AI automation suite that measurably reduced manual operations across HCode\'s business processes. Workflows that previously required human coordination now run automatically.\n\nHCode reflects our ability to take complex, multi-system operational problems and reduce them to something clean, manageable, and self-running.'
       }
     ],
     tags: ['n8n', 'AI Integrations', 'Cloud Infrastructure', 'Automation'],
@@ -164,7 +164,7 @@ export const projects: Project[] = [
     sections: [
       {
         title: 'Project Overview',
-        content: 'Tokwealth is a Real World Asset (RWA) tokenization platform that brings real estate investment onto the blockchain — enabling fractional ownership, transparent transactions, and a fundamentally more accessible way to invest in property.\n\nNuvanta AI designed and built the platform end to end — from investor-facing applications and smart contract infrastructure to compliance systems, security architecture, and financial integrations.'
+        content: 'Tokwealth is a Real World Asset (RWA) tokenization platform that brings real estate investment onto the blockchain — enabling fractional ownership, transparent transactions, and a fundamentally more accessible way to invest in property.\n\nWe designed and built the platform end to end — from investor-facing applications and smart contract infrastructure to compliance systems, security architecture, and financial integrations.'
       },
       {
         title: 'The Problem',
@@ -180,7 +180,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Outcome & What This Represents',
-        content: 'Nuvanta AI delivered a production-ready RWA tokenization platform capable of handling the full complexity of real estate investment on-chain — compliant, secure, and built for real investors.\n\nTokwealth reflects our ability to operate at the intersection of emerging technology, financial regulation, and consumer product design.'
+        content: 'We delivered a production-ready RWA tokenization platform capable of handling the full complexity of real estate investment on-chain — compliant, secure, and built for real investors.\n\nTokwealth reflects our ability to operate at the intersection of emerging technology, financial regulation, and consumer product design.'
       }
     ],
     tags: ['Web3', 'Smart Contracts', 'WaaS', 'Cybersecurity', 'Compliance'],
@@ -198,7 +198,7 @@ export const projects: Project[] = [
     sections: [
       {
         title: 'Project Overview',
-        content: 'Strategy Connect is a strategy consulting services platform built to bring structure, visibility, and operational clarity to the way consulting businesses manage their work. As the platform grew, the underlying architecture had accumulated technical debt requiring an overhaul.\n\nNuvanta AI stepped in as a strategic and technical partner, conducting a full design audit, overhauling the system architecture, and delivering a scalable SaaS workflow management platform built to support long-term growth.'
+        content: 'Strategy Connect is a strategy consulting services platform built to bring structure, visibility, and operational clarity to the way consulting businesses manage their work. As the platform grew, the underlying architecture had accumulated technical debt requiring an overhaul.\n\nWe stepped in as a strategic and technical partner, conducting a full design audit, overhauling the system architecture, and delivering a scalable SaaS workflow management platform built to support long-term growth.'
       },
       {
         title: 'The Problem',
@@ -214,7 +214,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Outcome & What This Represents',
-        content: 'Nuvanta AI delivered a restructured, scalable SaaS platform with a coherent design system, a clean technical foundation, and a workflow management product built for consulting businesses.\n\nStrategy Connect reflects our ability to inherit a system, diagnose it honestly, and rebuild it to last, bringing the same rigour to existing platforms as we do to new builds.'
+        content: 'We delivered a restructured, scalable SaaS platform with a coherent design system, a clean technical foundation, and a workflow management product built for consulting businesses.\n\nStrategy Connect reflects our ability to inherit a system, diagnose it honestly, and rebuild it to last, bringing the same rigour to existing platforms as we do to new builds.'
       }
     ],
     tags: ['SaaS', 'Systems Architecture', 'UI/UX', 'Product Strategy'],
