@@ -1,22 +1,42 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useInView } from '@/hooks/useInView';
 import { motion } from 'motion/react';
 import { Mail, Send, Calendar, CheckCircle2, ArrowRight } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [ref, isInView] = useInView({ threshold: 0.1, once: true });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    if (!formRef.current) return;
+
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID',
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID',
+        formRef.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY'
+      );
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('FAILED...', error);
+      alert('Something went wrong. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <section id="contact" className="py-8 md:py-12 w-full bg-bg px-6" ref={ref}>
-      <div className={`max-w-5xl mx-auto transition-all duration-1000 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+      <div className={`max-w-6xl mx-auto transition-all duration-1000 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 items-center">
           
           {/* Left Column - Content */}
@@ -34,29 +54,18 @@ export default function Contact() {
             <p className="text-muted text-[15px] md:text-[16px] leading-[1.6] mb-8 max-w-md">
               Have an idea? Or just want to say hello? Drop us a message and we&apos;ll get back to you within 24 hours.
             </p>
-
-            <div className="space-y-6">
-              <div className="flex items-start gap-4 group">
-                <div className="w-12 h-12 rounded-2xl bg-white border border-border flex items-center justify-center text-chart-2 transition-all group-hover:bg-chart-2 group-hover:text-white group-hover:scale-110 shadow-sm">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <div>
-                  <p className="text-[11px] font-mono uppercase tracking-[0.1em] text-muted-foreground mb-1">Email Us</p>
-                  <a href="mailto:hello@codemonks.com" className="text-[16px] font-semibold text-fg hover:text-chart-2 transition-colors">hello@codemonks.com</a>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Right Column - Form */}
           <div className="bg-white border border-border/40 rounded-[40px] p-6 md:p-12 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.04)]">
             {!isSubmitted ? (
-              <form className="space-y-5" onSubmit={handleSubmit}>
+              <form ref={formRef} className="space-y-5" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-[11px] font-mono uppercase tracking-[0.2em] text-muted ml-1 font-semibold">Name</label>
                     <input 
                       type="text" 
+                      name="user_name"
                       placeholder="Enter Your Name" 
                       required
                       className="w-full bg-white border border-border/80 rounded-2xl px-5 py-4 text-[14px] focus:outline-none focus:ring-4 focus:ring-chart-2/5 focus:border-chart-2 transition-all shadow-sm"
@@ -66,6 +75,7 @@ export default function Contact() {
                     <label className="text-[11px] font-mono uppercase tracking-[0.2em] text-muted ml-1 font-semibold">Email</label>
                     <input 
                       type="email" 
+                      name="user_email"
                       placeholder="Enter Your Email" 
                       required
                       className="w-full bg-white border border-border/80 rounded-2xl px-5 py-4 text-[14px] focus:outline-none focus:ring-4 focus:ring-chart-2/5 focus:border-chart-2 transition-all shadow-sm"
@@ -78,6 +88,7 @@ export default function Contact() {
                     <label className="text-[11px] font-mono uppercase tracking-[0.2em] text-muted ml-1 font-semibold">Designation</label>
                     <input 
                       type="text" 
+                      name="user_designation"
                       placeholder="Enter Your Designation" 
                       className="w-full bg-white border border-border/80 rounded-2xl px-5 py-4 text-[14px] focus:outline-none focus:ring-4 focus:ring-chart-2/5 focus:border-chart-2 transition-all shadow-sm"
                     />
@@ -86,6 +97,7 @@ export default function Contact() {
                     <label className="text-[11px] font-mono uppercase tracking-[0.2em] text-muted ml-1 font-semibold">Company</label>
                     <input 
                       type="text" 
+                      name="user_company"
                       placeholder="Enter Your Company" 
                       className="w-full bg-white border border-border/80 rounded-2xl px-5 py-4 text-[14px] focus:outline-none focus:ring-4 focus:ring-chart-2/5 focus:border-chart-2 transition-all shadow-sm"
                     />
@@ -96,6 +108,7 @@ export default function Contact() {
                   <label className="text-[11px] font-mono uppercase tracking-[0.2em] text-muted ml-1 font-semibold">Describe your needs</label>
                   <textarea 
                     rows={4} 
+                    name="message"
                     placeholder="Briefly describe your project requirements..." 
                     required
                     className="w-full bg-white border border-border/80 rounded-2xl px-5 py-4 text-[14px] focus:outline-none focus:ring-4 focus:ring-chart-2/5 focus:border-chart-2 transition-all resize-none shadow-sm"
@@ -104,10 +117,11 @@ export default function Contact() {
 
                 <button 
                   type="submit"
-                  className="w-full bg-fg text-white rounded-full py-4 text-[15px] font-semibold flex items-center justify-center gap-2 hover:bg-fg/90 transition-all active:scale-[0.98] mt-4 shadow-lg shadow-fg/20 group"
+                  disabled={isSubmitting}
+                  className="w-full bg-fg text-white rounded-full py-4 text-[15px] font-semibold flex items-center justify-center gap-2 hover:bg-fg/90 transition-all active:scale-[0.98] mt-4 shadow-lg shadow-fg/20 group disabled:opacity-70 disabled:pointer-events-none"
                 >
-                  Send Message
-                  <Send className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5" />
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {!isSubmitting && <Send className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5" />}
                 </button>
               </form>
             ) : (

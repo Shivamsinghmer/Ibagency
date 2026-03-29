@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fontsource/bricolage-grotesque": "^5.2.10",
     "@fontsource/dm-mono": "^5.2.7",
     "@fontsource/dm-sans": "^5.2.8",
