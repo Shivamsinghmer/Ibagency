@@ -7,7 +7,7 @@ export default function CTA() {
   const [ref, isInView] = useInView({ threshold: 0.15, once: true });
 
   return (
-    <section className="pt-4 pb-12 md:pt-8 md:pb-24 px-4 md:px-6 bg-bg overflow-hidden" ref={ref}>
+    <section className="pt-20 pb-12 md:pt-16 md:pb-24 px-4 md:px-6 bg-bg overflow-hidden" ref={ref}>
       <div className={`max-w-5xl mx-auto rounded-[32px] md:rounded-[48px] overflow-hidden relative border border-border/80 transition-all duration-1000 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
         
         {/* Main Content Area - Clean White */}

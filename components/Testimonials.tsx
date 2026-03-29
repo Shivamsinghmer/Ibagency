@@ -16,37 +16,31 @@ export default function Testimonials() {
       name: 'Amit Jain',
       role: 'Founder, Tokwealth',
       quote: 'They turned a complex fintech concept into a clean, fast product. The design quality and frontend engineering were genuinely impressive.',
-      image: 'https://i.pravatar.cc/150?u=2',
-    },
-    {
-      name: 'Lena Krotova',
-      role: 'Product Lead, Magnetiq Bank',
-      quote: "Our UX metrics improved significantly after the redesign. The team's attention to detail made the project effortless.",
-      image: 'https://i.pravatar.cc/150?u=3',
+      image: 'https://media.licdn.com/dms/image/v2/D4D03AQHDOxlKFMTUKg/profile-displayphoto-shrink_400_400/B4DZcauNdZGUAk-/0/1748500011497?e=1776297600&v=beta&t=HuOFiGtz1ds06Z7GUfahLu9S5BA9k0IoURiNCb4pOZU',
     },
     {
       name: 'Kaylan Sliney',
       role: 'Founder, MagnetIQ',
       quote: "The speed of delivery was unmatched. We went from idea to launch in record time with a rock-solid infrastructure.",
-      image: 'https://i.pravatar.cc/150?u=4',
+      image: 'https://media.licdn.com/dms/image/v2/D5603AQEAjuHrEAfgCQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1699495219798?e=1776297600&v=beta&t=anPSJ9MjxuAe0WgQjxeRDUP_UIq048Ew-VRW3th2Bqo',
     },
     {
       name: 'Greg LaVecchia',
       role: 'Founder, Bloom Nutrition',
       quote: "Highly recommended for any high-growth startup looking for a reliable partner who actually understands business goals.",
-      image: 'https://i.pravatar.cc/150?u=5',
+      image: 'https://media.licdn.com/dms/image/v2/D5603AQGKrEdrvaWqJA/profile-displayphoto-scale_400_400/B56Zw.CxXEH0Ag-/0/1770567441483?e=1776297600&v=beta&t=SoS6vIP9cQKIIVVtklW4BgHDNN0Y5rnjaKDF-LRlWzw',
     },
     {
       name: 'Haninder Pal Singh',
       role: 'Founder, StrategyConnect',
       quote: "They don't just build; they think along with you. Truly a strategic partner that added value at every stage of the process.",
-      image: 'https://i.pravatar.cc/150?u=6',
+      image: 'https://media.licdn.com/dms/image/v2/D4D03AQELSDkSVnCVqA/profile-displayphoto-scale_400_400/B4DZr5O0iQGgAg-/0/1765118004516?e=1776297600&v=beta&t=b3s3iUiTINN976KJS0bUdZEtk2KGiBFmRv8qo_yJv24',
     },
     {
       name: 'Dharmin Dontamsetti',
       role: 'Founder, SmartBike',
       quote: "Technical excellence combined with great communication. They're a rare find in the world of specialized dev agencies.",
-      image: 'https://i.pravatar.cc/150?u=8',
+      image: 'https://media.licdn.com/dms/image/v2/C4D03AQF2L5CfdCzJgg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1609958909703?e=1776297600&v=beta&t=we9MGPF0i0YyOQsrPg_kdBg3_pKMk2LuGcnV5W1g7KQ',
     },
   ];
 
@@ -158,8 +152,21 @@ export default function Testimonials() {
                   `}
                 >
                   <div className="flex items-center gap-4 mb-6">
-                    <div className={`w-12 h-12 rounded-full ${getAvatarColor(review.name).bg} ${getAvatarColor(review.name).text} ${getAvatarColor(review.name).border} border flex items-center justify-center font-bold text-[14px] flex-shrink-0 shadow-sm font-mono`}>
-                      {getInitials(review.name)}
+                    <div className={`w-12 h-12 rounded-full overflow-hidden border ${getAvatarColor(review.name).border} flex-shrink-0 shadow-sm relative bg-bg`}>
+                      {review.image ? (
+                        <img 
+                          src={review.image} 
+                          alt={review.name}
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            // Fallback if image fails to load
+                            (e.target as HTMLImageElement).style.display = 'none';
+                          }}
+                        />
+                      ) : null}
+                      <div className={`absolute inset-0 flex items-center justify-center -z-10 ${getAvatarColor(review.name).bg} ${getAvatarColor(review.name).text} font-bold text-[14px] font-mono`}>
+                        {getInitials(review.name)}
+                      </div>
                     </div>
                     <div className="flex flex-col min-w-0">
                       <h3 className="font-bricolage font-bold text-fg text-[16px] md:text-[18px] leading-tight truncate">{review.name}</h3>
@@ -176,30 +183,15 @@ export default function Testimonials() {
           </AnimatePresence>
         </div>
 
-        {/* Mobile Navigation */}
-        <div className="absolute bottom-[-60px] left-0 right-0 flex justify-center gap-4 md:hidden">
-            <button 
-              onClick={prevSlide}
-              className="w-12 h-12 rounded-full bg-white border border-border flex items-center justify-center shadow-lg active:scale-90 transition-all"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button 
-              onClick={nextSlide}
-              className="w-12 h-12 rounded-full bg-white border border-border flex items-center justify-center shadow-lg active:scale-90 transition-all"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-        </div>
       </div>
       
       {/* Visual Indicator Dots */}
-      <div className="flex justify-center gap-2 mt-12 md:mt-10">
+      <div className="flex justify-center gap-2 mt-8 md:mt-0">
         {reviews.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setCurrentIndex(idx)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === currentIndex ? 'w-8 bg-chart-2' : 'bg-border hover:bg-muted'}`}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === currentIndex ? 'w-8 bg-chart-2' : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'}`}
           />
         ))}
       </div>

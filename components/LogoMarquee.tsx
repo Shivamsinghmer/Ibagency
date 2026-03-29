@@ -63,10 +63,9 @@ export default function LogoMarquee() {
                 <img 
                   src={logo.src} 
                   alt={logo.name} 
-                  className={`h-full w-auto object-contain transition-all duration-300 ${logo.name === 'TokWealth' ? 'opacity-100 scale-100' : 'opacity-80 scale-95 group-hover/logo:opacity-100 group-hover/logo:scale-100'}`}
-                  style={{
-                    filter: logo.invert ? 'brightness(0)' : undefined,
-                  }}
+                  className={`h-full w-auto object-contain transition-all duration-300 
+                    ${logo.name === 'TokWealth' ? 'opacity-100 scale-100' : 'opacity-80 scale-95 group-hover/logo:opacity-100 group-hover/logo:scale-100'}
+                    ${logo.invert ? 'brightness-0 dark:invert' : ''}`}
                   loading={idx < 10 ? 'eager' : 'lazy'}
                 />
               </div>
