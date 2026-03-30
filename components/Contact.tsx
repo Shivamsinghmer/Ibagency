@@ -65,7 +65,7 @@ export default function Contact() {
                     <label className="text-[11px] font-mono uppercase tracking-[0.2em] text-muted ml-1 font-semibold">Name</label>
                     <input 
                       type="text" 
-                      name="user_name"
+                      name="name"
                       placeholder="Enter Your Name" 
                       required
                       className="w-full bg-white border border-border/80 rounded-2xl px-5 py-4 text-[14px] focus:outline-none focus:ring-4 focus:ring-chart-2/5 focus:border-chart-2 transition-all shadow-sm"
@@ -75,7 +75,7 @@ export default function Contact() {
                     <label className="text-[11px] font-mono uppercase tracking-[0.2em] text-muted ml-1 font-semibold">Email</label>
                     <input 
                       type="email" 
-                      name="user_email"
+                      name="email"
                       placeholder="Enter Your Email" 
                       required
                       className="w-full bg-white border border-border/80 rounded-2xl px-5 py-4 text-[14px] focus:outline-none focus:ring-4 focus:ring-chart-2/5 focus:border-chart-2 transition-all shadow-sm"
@@ -88,7 +88,7 @@ export default function Contact() {
                     <label className="text-[11px] font-mono uppercase tracking-[0.2em] text-muted ml-1 font-semibold">Designation</label>
                     <input 
                       type="text" 
-                      name="user_designation"
+                      name="designation"
                       placeholder="Enter Your Designation" 
                       className="w-full bg-white border border-border/80 rounded-2xl px-5 py-4 text-[14px] focus:outline-none focus:ring-4 focus:ring-chart-2/5 focus:border-chart-2 transition-all shadow-sm"
                     />
@@ -97,7 +97,7 @@ export default function Contact() {
                     <label className="text-[11px] font-mono uppercase tracking-[0.2em] text-muted ml-1 font-semibold">Company</label>
                     <input 
                       type="text" 
-                      name="user_company"
+                      name="company"
                       placeholder="Enter Your Company" 
                       className="w-full bg-white border border-border/80 rounded-2xl px-5 py-4 text-[14px] focus:outline-none focus:ring-4 focus:ring-chart-2/5 focus:border-chart-2 transition-all shadow-sm"
                     />

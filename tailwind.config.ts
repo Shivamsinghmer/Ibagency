@@ -24,8 +24,8 @@ const config: Config = {
       },
       fontFamily: {
         bricolage: ["var(--font-bricolage)"],
-        sans: ["var(--font-dm-sans)"],
-        mono: ["var(--font-dm-mono)"],
+        sans: ["var(--font-sans)"],
+        mono: ["var(--font-mono)"],
       },
       keyframes: {
         marquee: {
