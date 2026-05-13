@@ -12,7 +12,7 @@ const logos = [
   },
   { 
     name: 'TokWealth', 
-    src: '/marquee/tokWealth.png', 
+    src: 'https://github.com/Shivamsinghmer/Ibagency/blob/main/public/marquee/TokWealth.png', 
     invert: true, 
     industry: 'Real Estate Tokenization (RWA)', 
     service: 'Asset Tokenization • Compliant Payment Stacks • Information Security' 
